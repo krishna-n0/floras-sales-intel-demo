@@ -1,0 +1,87 @@
+{
+  "case_id": "credit_card_rewards_floras",
+  "title": "Credit card rewards → Floras",
+  "archetype": "transaction_attached_floras",
+  "maturity_level": "L3",
+  "floras_mechanism": "Banks, fintechs, or card issuers embed Floras into card transactions as a climate-linked reward. Instead of giving only cashback, points, or miles, qualifying card spend generates Floras in a consumer or enterprise wallet. The cardholder or company can allocate Floras toward verified sustainability projects, creating a rewards experience tied to climate action rather than generic financial perks.",
+  "lead_triggers": [
+    "credit card",
+    "card rewards",
+    "cashback",
+    "points",
+    "miles",
+    "loyalty program",
+    "fintech",
+    "retail banking",
+    "green banking",
+    "sustainable finance",
+    "consumer banking",
+    "payment card",
+    "digital wallet"
+  ],
+  "pain_signals": [
+    "crowded card rewards market",
+    "difficulty differentiating cashback or points products",
+    "bank wants sustainable finance product for retail customers",
+    "loyalty program has no ESG narrative",
+    "younger consumers expect climate-conscious financial products",
+    "need for visible sustainability engagement without changing core banking infrastructure"
+  ],
+  "sectors": [
+    "banking",
+    "fintech",
+    "payments",
+    "credit cards",
+    "consumer finance",
+    "retail banking"
+  ],
+  "buyer_personas": [
+    "Head of Cards",
+    "Product Manager for Payments",
+    "Chief Marketing Officer",
+    "Head of Sustainability / ESG",
+    "Loyalty Program Director"
+  ],
+  "budget_source": "Card rewards budget; marketing budget; customer acquisition budget; ESG product innovation budget",
+  "safe_claims": [
+    "Floras adds a climate-linked layer to everyday card rewards",
+    "Cardholders can allocate earned Floras toward verified sustainability projects",
+    "Floras helps differentiate card products in a crowded rewards market",
+    "The rewards analogy applies to mechanics, while Floras value is restricted to verified sustainability impact"
+  ],
+  "conditional_claims": [
+    "If the issuer already has sustainable banking goals, Floras can support customer-facing activation of those goals",
+    "If the card targets climate-conscious consumers, Floras can become a core product differentiator",
+    "If transaction categories are tagged, Floras issuance can be customized by spend category"
+  ],
+  "avoid_claims": [
+    "Every card purchase becomes carbon-neutral",
+    "Floras eliminates the cardholder's personal footprint",
+    "The card guarantees emissions reduction for every transaction",
+    "Floras is the same as unrestricted cashback"
+  ],
+  "output_templates": {
+    "one_liner": "Turn {company_name}'s card rewards into climate-linked impact instead of generic points.",
+    "short_pitch": "{company_name} can use Floras to create a differentiated card rewards experience where qualifying spend generates climate-designated value. Instead of only giving cashback or points, the cardholder earns Floras that can be allocated toward verified sustainability projects, creating a clearer ESG story and a more engaging loyalty proposition."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "Our rewards program is already competitive—we don't need another feature.",
+      "response": "Floras is not a generic perk add-on; it gives card products a distinct climate-linked narrative in a crowded rewards market. Issuers can position Floras as ESG-aligned differentiation without rebuilding core card infrastructure."
+    },
+    {
+      "objection": "Consumers want cashback, not climate credits.",
+      "response": "Floras can complement existing rewards rather than replace them. The strongest positioning targets climate-conscious segments and gives issuers a sustainability story that standard cashback cannot provide."
+    },
+    {
+      "objection": "Regulatory and compliance risk on green claims.",
+      "response": "Floras value is restricted to verified sustainability project allocation, not unrestricted cash. Claims should stay within safe-claim boundaries and tie issuance to documented project outcomes and certificates."
+    }
+  ],
+  "suggested_project_types": [
+    "Renewable energy",
+    "Reforestation",
+    "Carbon removal",
+    "Community climate projects"
+  ]
+}

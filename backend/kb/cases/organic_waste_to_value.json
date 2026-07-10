@@ -1,0 +1,85 @@
+{
+  "case_id": "organic_waste_to_value",
+  "title": "Organic waste-to-value projects funded by Floras",
+  "archetype": "insetting_project_floras",
+  "maturity_level": "L2",
+  "floras_mechanism": "Companies with organic byproducts or agricultural waste use Floras to fund projects that convert waste streams into useful outputs such as bioenergy, compost, soil inputs, or lower-impact materials. Floras can be linked to transactions, supplier programs, or procurement contracts, creating a mechanism to finance waste reduction and circularity projects inside or near the value chain.",
+  "lead_triggers": [
+    "organic waste",
+    "food waste",
+    "agricultural waste",
+    "bagasse",
+    "biomass",
+    "waste-to-energy",
+    "circular economy",
+    "byproduct",
+    "composting",
+    "biochar",
+    "anaerobic digestion",
+    "waste valorization"
+  ],
+  "pain_signals": [
+    "company has significant organic waste or byproducts",
+    "waste disposal creates cost and emissions burden",
+    "company wants circular economy projects",
+    "supplier regions have underused biomass streams",
+    "brand wants insetting opportunities inside its value chain"
+  ],
+  "sectors": [
+    "food and beverage",
+    "agriculture",
+    "sugar",
+    "coffee",
+    "retail",
+    "hospitality",
+    "food processing",
+    "consumer goods"
+  ],
+  "buyer_personas": [
+    "Head of Sustainability / ESG",
+    "Circular Economy Lead",
+    "Operations Director",
+    "Procurement Director",
+    "Supply Chain Director"
+  ],
+  "budget_source": "Waste management budget; sustainability project budget; supplier development budget; ESG budget; operations efficiency budget",
+  "safe_claims": [
+    "Floras can help fund verified waste-to-value or circularity projects",
+    "Companies can allocate Floras toward projects connected to organic waste reduction or reuse",
+    "Floras can support insetting-style projects when they are connected to the company's value chain"
+  ],
+  "conditional_claims": [
+    "If the project is inside the company's value chain, it may support an insetting narrative",
+    "If project outcomes are measured, Floras can support documented circularity or waste-reduction claims"
+  ],
+  "avoid_claims": [
+    "All waste is eliminated",
+    "The project automatically offsets the company's full footprint",
+    "Waste-to-value outcomes are guaranteed without project verification"
+  ],
+  "output_templates": {
+    "one_liner": "Turn {company_name}'s organic waste challenge into a Floras-funded circularity project.",
+    "short_pitch": "{company_name} can use Floras to fund verified waste-to-value projects connected to organic byproducts or supplier waste streams. Floras create a transaction-linked funding mechanism for circularity projects such as biomass reuse, composting, bioenergy, or other verified waste-reduction initiatives."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "We already have waste management and recycling programs.",
+      "response": "Floras does not replace operational waste programs—it funds verified circularity or waste-to-value projects that extend beyond disposal, especially where byproducts or supplier biomass can be valorized inside the value chain."
+    },
+    {
+      "objection": "Insetting claims are complex and hard to verify.",
+      "response": "Floras allocation should tie to verified projects with documented outcomes. Insetting narratives are conditional on project location in or near the value chain and measured impact—not automatic from any waste stream."
+    },
+    {
+      "objection": "Our waste volumes vary too much to plan projects.",
+      "response": "Floras linked to transactions or supplier programs can scale funding with activity rather than requiring a single fixed annual project budget, building a pool of climate-designated value over time."
+    }
+  ],
+  "suggested_project_types": [
+    "Bioenergy",
+    "Composting and soil health",
+    "Anaerobic digestion",
+    "Biomass valorization",
+    "Circular materials"
+  ]
+}

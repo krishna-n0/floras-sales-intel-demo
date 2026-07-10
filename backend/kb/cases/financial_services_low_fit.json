@@ -1,0 +1,83 @@
+{
+  "case_id": "financial_services_low_fit",
+  "title": "Financial services — deprioritize unless specific sub-use-case",
+  "archetype": "non_core_icp",
+  "maturity_level": "L1",
+  "floras_mechanism": "Investment banks, asset managers, and capital markets firms are generally a poor primary fit for Floras' supplier-embedded, high-volume goods procurement model. Their operations are services-heavy with limited supplier networks for physical inputs. Exceptions may exist—corporate travel programs, card or lending product innovation, financed emissions programs—but default outreach should deprioritize unless research surfaces a specific, credible transaction path. Do not conflate financial services ESG activity with Floras core ICP.",
+  "lead_triggers": [
+    "investment bank",
+    "asset management",
+    "capital markets",
+    "trading",
+    "wealth management",
+    "private equity",
+    "hedge fund",
+    "brokerage",
+    "financial services",
+    "securities",
+    "m&a advisory"
+  ],
+  "pain_signals": [
+    "services-heavy business model with minimal goods procurement",
+    "ESG focus on financed emissions or portfolio—not supplier transactions",
+    "sustainability narrative without procurement leverage",
+    "high revenue but low transaction-embed surface for physical goods",
+    "climate strategy centered on lending standards or portfolio alignment"
+  ],
+  "sectors": [
+    "financial services",
+    "banking",
+    "investment banking",
+    "asset management",
+    "capital markets",
+    "private equity",
+    "wealth management",
+    "insurance"
+  ],
+  "buyer_personas": [
+    "Head of Sustainability / ESG",
+    "Corporate Travel Manager",
+    "Head of Sustainable Finance",
+    "Innovation or product lead (cards/lending only if applicable)"
+  ],
+  "budget_source": "ESG program budget; corporate travel budget; sustainable finance product budget (only for specific product-led exceptions)",
+  "safe_claims": [
+    "Floras' core model targets transaction-embedded climate value in procurement and supplier relationships",
+    "Financial services firms are typically lower fit for supplier-embedded Floras unless a specific sub-use-case applies",
+    "Corporate travel or product-led programs (cards, loans) may be evaluated separately from generic financial services outreach"
+  ],
+  "conditional_claims": [
+    "If the firm has significant corporate travel or private aviation, evaluate the corporate travel case pattern separately",
+    "If the firm issues consumer or commercial card products, evaluate the credit card rewards case pattern",
+    "If the firm offers green loan products, evaluate the sustainable loan case pattern"
+  ],
+  "avoid_claims": [
+    "Floras fits investment banks because they have large revenues",
+    "Financial services ESG leadership implies high Floras fit",
+    "Floras addresses financed emissions or portfolio decarbonization directly",
+    "Every bank should adopt supplier-embedded Floras"
+  ],
+  "output_templates": {
+    "one_liner": "{company_name} is likely a low-priority Floras target unless a specific travel or product use case applies.",
+    "short_pitch": "{company_name} operates in financial services where climate strategy typically centers on portfolios, financed emissions, or lending standards—not high-volume goods procurement. Floras' core strength is embedding climate value into supplier and purchasing transactions, which is a weak default fit here. Deprioritize broad outreach unless research shows a credible exception such as significant corporate travel, card rewards innovation, or green lending products worth a targeted conversation."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "We're a major global bank with ambitious net-zero goals.",
+      "response": "Net-zero ambition in financial services often targets financed emissions and portfolio alignment—a different problem than transaction-embedded supplier Floras. Fit should be assessed on specific spend categories and product lines, not headline climate commitments."
+    },
+    {
+      "objection": "Our employees travel extensively for client work.",
+      "response": "Significant corporate travel may justify evaluating the corporate travel Floras pattern as a separate, narrower conversation—not a general financial services supplier pitch."
+    },
+    {
+      "objection": "We want to be seen as an ESG innovator.",
+      "response": "Floras product-led cases (cards, green loans) may apply where the firm issues those products. Generic investment banking outreach on supplier embed is unlikely to resonate and risks misaligned positioning."
+    }
+  ],
+  "suggested_project_types": [
+    "Sustainable aviation fuel (SAF)",
+    "Renewable energy",
+    "Carbon removal"
+  ]
+}

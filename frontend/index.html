@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Floras Sales Intelligence Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-forest: #3d5e3a;
+      --color-leaf: #4a7c59;
+      --color-olive: #5a6e3a;
+      --color-brand-text: #9c9d65;
+      --color-bg: #f5f5f3;
+      --color-surface: #ffffff;
+      --color-surface-warm: #f9f8f6;
+      --color-surface-sage: #f3f5eb;
+      --color-text: #1a2416;
+      --color-text-muted: #6b7c65;
+      --color-border: #e2e8dd;
+      --color-border-soft: #eceee9;
+      --color-balance-bg: #4e6b38;
+      --color-wallet-start: #9c9d65;
+      --color-wallet-end: #3d5e3a;
+      --color-focus: #2d6a4f;
+      --text-hero: 2.8rem;
+      --text-h1: 2.2rem;
+      --text-h2: 1.6rem;
+      --text-h3: 1.2rem;
+      --text-label: 0.72rem;
+      --text-body: 1rem;
+      --text-body-sm: 0.875rem;
+      --text-stat: 2.4rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.5;
+    }
+
+    .site-header {
+      background: linear-gradient(135deg, var(--color-wallet-start), var(--color-wallet-end));
+      color: #fff;
+      padding: 20px 24px;
+    }
+
+    .site-header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-lockup img {
+      height: 20px;
+      display: block;
+    }
+
+    .brand-wordmark {
+      font-size: 0.95rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .brand-tagline {
+      font-size: var(--text-label);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 4px;
+    }
+
+    .site-header-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.25;
+      text-align: right;
+      max-width: 280px;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+
+    .hero-intro {
+      margin-bottom: 8px;
+    }
+
+    .hero-intro p {
+      font-size: var(--text-body);
+      line-height: 1.6;
+      max-width: 720px;
+    }
+
+    .eyebrow,
+    .section-label {
+      font-size: var(--text-label);
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .section-divider {
+      width: 28px;
+      height: 2px;
+      background: var(--color-leaf);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: var(--text-hero);
+      font-weight: 800;
+      line-height: 1.05;
+      margin: 0 0 12px;
+      color: var(--color-text);
+    }
+
+    h2 {
+      font-size: var(--text-h2);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: var(--text-h3);
+      font-weight: 600;
+      line-height: 1.3;
+      margin: 0 0 8px;
+      color: var(--color-text);
+    }
+
+    .card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      margin-top: 24px;
+    }
+
+    .card-warm {
+      background: var(--color-surface-warm);
+    }
+
+    .form {
+      display: grid;
+      gap: 16px;
+    }
+
+    label {
+      display: grid;
+      gap: 8px;
+      font-weight: 700;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font: inherit;
+      background: var(--color-surface);
+      color: var(--color-text);
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 1px;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 12px 24px;
+      font-weight: 700;
+      font-size: var(--text-body-sm);
+      color: #fff;
+      background: var(--color-leaf);
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    button:hover:not(:disabled) {
+      background: var(--color-forest);
+    }
+
+    button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .secondary {
+      color: var(--color-text);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+
+    .secondary:hover:not(:disabled) {
+      background: var(--color-surface-warm);
+      color: var(--color-text);
+    }
+
+    .activity-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .activity-toolbar label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .activity-toolbar select {
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font: inherit;
+      min-width: 160px;
+      background: var(--color-surface);
+    }
+
+    .activity-table-wrap {
+      overflow-x: auto;
+    }
+
+    table.activity-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .activity-table th,
+    .activity-table td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--color-border-soft);
+      vertical-align: top;
+    }
+
+    .activity-table th {
+      font-size: var(--text-label);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+
+    .activity-table tbody tr:hover {
+      background: var(--color-surface-warm);
+      cursor: pointer;
+    }
+
+    .activity-empty {
+      color: var(--color-text-muted);
+      font-size: var(--text-body-sm);
+      margin: 0;
+    }
+
+    .fit-pill {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .fit-pill.high { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
+    .fit-pill.medium { background: #fff8e1; color: #e65100; border: 1px solid #ffe082; }
+    .fit-pill.low { background: #fdecea; color: #b71c1c; border: 1px solid #ef9a9a; }
+
+    .rep-hint {
+      font-size: var(--text-body-sm);
+      font-weight: 400;
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    .mgmt-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .mgmt-tabs button {
+      background: var(--color-surface-sage);
+      color: var(--color-text);
+      font-size: var(--text-body-sm);
+      padding: 10px 14px;
+      border: 1px solid var(--color-border);
+    }
+
+    .mgmt-tabs button.active {
+      background: var(--color-leaf);
+      color: #fff;
+      border-color: var(--color-leaf);
+    }
+
+    .mgmt-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .mgmt-stat {
+      background: var(--color-surface-warm);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .mgmt-stat strong {
+      display: block;
+      font-size: var(--text-stat);
+      font-weight: 800;
+      line-height: 1;
+      color: var(--color-text);
+    }
+
+    .mgmt-stat span {
+      font-size: var(--text-label);
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 4px;
+      display: block;
+    }
+
+    .mgmt-takeaways {
+      background: var(--color-surface-sage);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+      font-size: var(--text-body-sm);
+    }
+
+    .mgmt-takeaways ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    .mgmt-takeaways li {
+      margin-bottom: 6px;
+    }
+
+    .theme-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .theme-chip {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+    }
+
+    .mgmt-section {
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+
+    .mgmt-section summary {
+      cursor: pointer;
+      padding: 14px 16px;
+      font-weight: 600;
+      background: var(--color-surface-warm);
+      list-style: none;
+    }
+
+    .mgmt-section summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .mgmt-section-body {
+      padding: 0 16px 14px;
+    }
+
+    .mgmt-group {
+      border-top: 1px solid var(--color-border-soft);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .mgmt-group h4 {
+      margin: 0 0 8px;
+      font-size: var(--text-body);
+      font-weight: 600;
+      color: var(--color-brand-text);
+    }
+
+    .mgmt-group-meta {
+      font-size: var(--text-body-sm);
+      color: var(--color-text-muted);
+      margin-bottom: 8px;
+    }
+
+    .mgmt-mini-table td {
+      padding: 6px 8px 6px 0;
+      vertical-align: top;
+      border-bottom: 1px solid var(--color-border-soft);
+    }
+
+    .pitch-feedback-form select,
+    .pitch-feedback-form textarea {
+      width: 100%;
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font: inherit;
+      background: var(--color-surface);
+    }
+
+    .pitch-feedback-thanks {
+      color: var(--color-leaf);
+      font-weight: 600;
+      font-size: var(--text-body-sm);
+    }
+
+    .resultTop {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      border-bottom: 1px solid var(--color-border-soft);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .result-header-band {
+      background: linear-gradient(135deg, var(--color-wallet-start), var(--color-wallet-end));
+      color: #fff;
+      margin: -24px -24px 24px;
+      padding: 20px 24px;
+      border-radius: 16px 16px 0 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .result-header-band .eyebrow {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .result-header-band h2 {
+      color: #fff;
+    }
+
+    .score {
+      min-width: 120px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    .score-label {
+      font-size: var(--text-label);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.75);
+      margin: 0 0 6px;
+      font-weight: 700;
+    }
+
+    .score-high,
+    .score-medium,
+    .score-low {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.35);
+      color: #fff;
+    }
+
+    .score span {
+      font-size: var(--text-stat);
+      font-weight: 800;
+      display: block;
+      line-height: 1;
+    }
+
+    .score p {
+      margin: 6px 0 0;
+      font-weight: 600;
+      font-size: var(--text-body-sm);
+    }
+
+    section {
+      border-bottom: 1px solid var(--color-border-soft);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    section .section-label {
+      color: var(--color-text-muted);
+      margin-bottom: 2px;
+    }
+
+    .text-muted {
+      color: var(--color-text-muted);
+      font-size: var(--text-body-sm);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tags span {
+      background: var(--color-surface-sage);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-weight: 600;
+      font-size: var(--text-body-sm);
+      color: var(--color-text);
+    }
+
+    .pitch {
+      background: var(--color-surface-warm);
+      border-left: 3px solid var(--color-leaf);
+      padding: 16px 18px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .pitch p {
+      margin: 0 0 12px;
+      line-height: 1.6;
+      font-size: var(--text-body);
+    }
+
+    .case-badge {
+      display: inline-block;
+      margin-left: 8px;
+      background: var(--color-surface-sage);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-brand-text);
+      vertical-align: middle;
+    }
+
+    .status.error {
+      background: #fdecea;
+      border: 1px solid #f5c2c0;
+      color: #8a1f17;
+    }
+
+    .status.loading {
+      background: var(--color-surface-sage);
+      border: 1px solid var(--color-border);
+      color: var(--color-forest);
+    }
+
+    .pipeline-step strong {
+      min-width: 28px;
+      color: var(--color-brand-text);
+      font-weight: 700;
+    }
+
+    .limitations {
+      font-size: var(--text-body-sm);
+      color: var(--color-text-muted);
+      margin-top: 8px;
+      line-height: 1.5;
+    }
+
+    .source-badges span {
+      background: var(--color-surface-sage);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    #researchUrlsTitle {
+      font-size: var(--text-body-sm);
+      font-weight: 700;
+      color: var(--color-text-muted);
+      margin: 12px 0 8px;
+    }
+
+    #researchUrls a {
+      color: var(--color-leaf);
+      word-break: break-all;
+    }
+
+    .mgmt-mini-table {
+      width: 100%;
+      font-size: var(--text-body-sm);
+      border-collapse: collapse;
+    }
+
+    .mgmt-panel.hidden {
+      display: none;
+    }
+
+    .pitch-feedback-form {
+      display: grid;
+      gap: 14px;
+      margin-top: 8px;
+    }
+
+    .pitch-feedback-form label {
+      font-weight: 600;
+      font-size: var(--text-body-sm);
+    }
+
+    .pitch-feedback-form textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .pitch-feedback-list {
+      font-size: var(--text-body-sm);
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .pitch-feedback-list li {
+      margin-bottom: 10px;
+    }
+
+    .pipeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .pipeline-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: var(--text-body);
+      line-height: 1.5;
+    }
+
+    .source-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .status {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: var(--text-body-sm);
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .pitch p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 32px 16px 48px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .site-header-title {
+        text-align: left;
+        max-width: 100%;
+      }
+
+      .result-header-band {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div>
+        <div class="brand-lockup">
+          <img src="assets/light-logo.png" alt="" />
+          <span class="brand-wordmark">FLORAS</span>
+        </div>
+        <div class="brand-tagline">Reward The Earth</div>
+      </div>
+      <div class="site-header-title">Sales Intelligence Demo</div>
+    </div>
+  </header>
+
+  <div class="page">
+    <div class="hero-intro">
+      <p class="section-label">Sales intelligence</p>
+      <div class="section-divider"></div>
+      <h1>Identify targets. Build personalized use cases.</h1>
+      <p>
+        Enter a company to generate a sales intelligence report for how Floras
+        could connect the company to verified climate projects. The
+        <strong>Lead Research Agent</strong> scrapes website paths (Jina),
+        always runs <strong>Tavily web search</strong>, and merges your notes.
+        Then the <strong>Proposal</strong> and <strong>Quality Review</strong>
+        agents build and critique the report.
+      </p>
+      <p class="limitations">
+        Proof of concept: fit score is AI-estimated using Floras company context,
+        not a formal rubric. Verified project catalog not yet connected.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="section-label">Agent workflow</p>
+      <div class="section-divider"></div>
+      <div class="pipeline">
+        <div class="pipeline-step">
+          <strong>①</strong>
+          <span><strong>Lead Research</strong> — website paths, Tavily search, user notes</span>
+        </div>
+        <div class="pipeline-step">
+          <strong>②</strong>
+          <span><strong>Proposal Agent</strong> — fit score, use case, outreach pitch</span>
+        </div>
+        <div class="pipeline-step">
+          <strong>③</strong>
+          <span><strong>Quality Reviewer</strong> — critiques specificity and grounding</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <form class="form" id="companyForm">
+        <button type="button" class="secondary" id="exampleBtn">
+          Fill Example: Patagonia
+        </button>
+
+        <label>
+          Your name
+          <input id="rep_name" placeholder="Example: Krishna" required />
+        </label>
+        <p class="rep-hint">Saved in your browser so team activity shows who ran each search.</p>
+
+        <label>
+          Company name
+          <input id="company_name" placeholder="Example: Patagonia" required />
+        </label>
+
+        <label>
+          Industry
+          <input id="industry" placeholder="Example: Outdoor apparel" />
+        </label>
+
+        <label>
+          Website
+          <input id="website" placeholder="Example: https://www.patagonia.com" />
+        </label>
+
+        <label>
+          Notes
+          <textarea id="notes" placeholder="Add anything you know about the company, sustainability goals, emissions, or customer base."></textarea>
+        </label>
+
+        <label style="flex-direction: row; align-items: center; gap: 8px; font-weight: 500;">
+          <input type="checkbox" id="refresh_research" style="width: auto;" />
+          Re-run scraping (ignore saved research cache)
+        </label>
+
+        <button id="submitBtn" type="submit">Generate sales intelligence</button>
+        <p class="status hidden" id="statusMessage" role="status"></p>
+      </form>
+    </div>
+
+    <div class="card" id="activityCard">
+      <p class="section-label">Management view</p>
+      <div class="section-divider"></div>
+      <h2 style="margin: 4px 0 16px;">Team research activity &amp; patterns</h2>
+
+      <div class="mgmt-tabs">
+        <button type="button" class="active" id="mgmtTabOverview">Overview</button>
+        <button type="button" id="mgmtTabSections">Sectioned notes</button>
+        <button type="button" id="mgmtTabAll">All searches</button>
+        <button type="button" class="secondary" id="refreshActivityBtn" style="margin-left: auto;">Refresh</button>
+      </div>
+
+      <div id="mgmtPanelOverview" class="mgmt-panel">
+        <div class="mgmt-stats" id="mgmtStats"></div>
+        <div class="mgmt-takeaways">
+          <strong>Manager takeaways</strong>
+          <ul id="mgmtTakeaways"></ul>
+        </div>
+        <p class="section-label" style="margin-bottom: 8px;">Search themes</p>
+        <div class="theme-row" id="mgmtThemes"></div>
+        <p class="section-label" style="margin-bottom: 8px; margin-top: 16px;">Rep focus</p>
+        <ul id="mgmtRepFocus" class="text-muted" style="margin-top: 0;"></ul>
+        <p class="section-label" style="margin-bottom: 8px; margin-top: 16px;">Pitch feedback</p>
+        <ul id="mgmtPitchFeedback" class="pitch-feedback-list"></ul>
+      </div>
+
+      <div id="mgmtPanelSections" class="mgmt-panel hidden">
+        <div id="mgmtSections"></div>
+      </div>
+
+      <div id="mgmtPanelAll" class="mgmt-panel hidden">
+        <div class="activity-toolbar">
+          <label>
+            Filter by rep
+            <select id="activityRepFilter">
+              <option value="">Everyone</option>
+            </select>
+          </label>
+        </div>
+        <div class="activity-table-wrap">
+          <table class="activity-table">
+            <thead>
+              <tr>
+                <th>When</th>
+                <th>Rep</th>
+                <th>Company</th>
+                <th>Industry</th>
+                <th>Entity</th>
+                <th>Fit</th>
+                <th>Case</th>
+              </tr>
+            </thead>
+            <tbody id="activityTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="activity-empty hidden" id="activityEmpty">No searches logged yet. Run a report with your name above.</p>
+    </div>
+
+    <div class="card hidden" id="resultCard">
+      <div class="result-header-band resultTop">
+        <div>
+          <p class="eyebrow">Target report</p>
+          <h2 id="resultCompany"></h2>
+        </div>
+        <div class="score" id="scoreBox">
+          <p class="score-label">Lead fit score</p>
+          <span id="fitScore"></span>
+          <p id="fitLevel"></p>
+        </div>
+      </div>
+
+      <section>
+        <p class="section-label">Research source</p>
+        <div class="section-divider"></div>
+        <p id="researchCacheNote" class="text-muted" style="margin-bottom: 8px;"></p>
+        <div class="source-badges" id="researchSourceBadges"></div>
+        <p id="sourcesCount"></p>
+        <ul id="researchUrls"></ul>
+        <p id="researchPreview" class="text-muted"></p>
+      </section>
+
+      <section>
+        <p class="section-label">Financial profile</p>
+        <div class="section-divider"></div>
+        <p id="financialListingType" class="text-muted" style="font-weight: 600; margin-bottom: 8px;"></p>
+        <p id="financialSummary" style="margin-bottom: 8px;"></p>
+        <p id="financialInterpretation" class="text-muted"></p>
+      </section>
+
+      <section>
+        <p class="section-label">Business hierarchy</p>
+        <div class="section-divider"></div>
+        <p id="entityTypeLabel" style="font-weight: 600; margin-bottom: 8px;"></p>
+        <p id="entityClassificationMethod" class="text-muted" style="margin-bottom: 8px;"></p>
+        <p id="entityLlmRationale" class="text-muted" style="margin-bottom: 8px;"></p>
+        <p id="entityPitchFocus" style="margin-bottom: 8px;"></p>
+        <p id="outreachTarget" class="text-muted" style="margin-bottom: 8px;"></p>
+        <div class="tags" id="entitySignals"></div>
+      </section>
+
+      <section>
+        <p class="section-label">Company summary</p>
+        <div class="section-divider"></div>
+        <p id="companySummary"></p>
+      </section>
+
+      <section>
+        <p class="section-label">Key sales signals</p>
+        <div class="section-divider"></div>
+        <ul id="keySignals"></ul>
+      </section>
+
+      <section>
+        <p class="section-label">Personalized use case</p>
+        <div class="section-divider"></div>
+        <p id="useCase"></p>
+      </section>
+
+      <section>
+        <p class="section-label">Suggested project types</p>
+        <div class="section-divider"></div>
+        <div class="tags" id="projectTypes"></div>
+      </section>
+
+      <section>
+        <p class="section-label">Outreach pitch</p>
+        <div class="section-divider"></div>
+        <p id="matchedCaseBadge" class="case-badge hidden" style="margin: 0 0 12px;"></p>
+        <div class="pitch" id="outreachPitch"></div>
+      </section>
+
+      <section>
+        <p class="section-label">Risks &amp; unknowns</p>
+        <div class="section-divider"></div>
+        <ul id="risks"></ul>
+      </section>
+
+      <section>
+        <p class="section-label">Quality review</p>
+        <div class="section-divider"></div>
+        <p id="qualityRating" class="tags" style="margin-bottom: 8px;"></p>
+        <p id="qualityReview"></p>
+        <ul id="reviewImprovements"></ul>
+      </section>
+
+      <section id="pitchFeedbackSection">
+        <p class="section-label">Pitch feedback</p>
+        <div class="section-divider"></div>
+        <p class="text-muted" style="margin-bottom: 12px;">
+          After you review or send the outreach pitch, tell us how it worked.
+        </p>
+        <form class="pitch-feedback-form" id="pitchFeedbackForm">
+          <label>
+            Did you use this pitch?
+            <select id="fb_used_pitch" required>
+              <option value="">Select…</option>
+              <option value="yes">Yes — sent or used in outreach</option>
+              <option value="not_yet">Not yet — still reviewing</option>
+              <option value="no">No — did not use it</option>
+            </select>
+          </label>
+          <label>
+            Did you like this pitch?
+            <select id="fb_liked_pitch" required>
+              <option value="">Select…</option>
+              <option value="yes">Yes — strong / send-ready</option>
+              <option value="somewhat">Somewhat — needed edits</option>
+              <option value="no">No — not useful</option>
+            </select>
+          </label>
+          <label>
+            Was it effective?
+            <select id="fb_was_effective" required>
+              <option value="">Select…</option>
+              <option value="yes">Yes — got a positive response</option>
+              <option value="somewhat">Somewhat — mixed or early signal</option>
+              <option value="no">No — no traction</option>
+              <option value="too_early">Too early to tell</option>
+            </select>
+          </label>
+          <label>
+            What can we improve in the pitch?
+            <textarea id="fb_improvements" placeholder="Tone, length, Floras mechanism, missing context, etc."></textarea>
+          </label>
+          <button type="submit" class="secondary" id="pitchFeedbackBtn">Submit pitch feedback</button>
+          <p class="pitch-feedback-thanks hidden" id="pitchFeedbackThanks">Thanks — feedback saved.</p>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = "http://127.0.0.1:8000";
+    const API_URL = `${API_BASE}/analyze-company`;
+    const REP_NAME_KEY = "floras_rep_name";
+
+    const form = document.getElementById("companyForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const resultCard = document.getElementById("resultCard");
+    const statusMessage = document.getElementById("statusMessage");
+    const repNameInput = document.getElementById("rep_name");
+    const activityRepFilter = document.getElementById("activityRepFilter");
+    let lastReport = {};
+
+    const savedRep = localStorage.getItem(REP_NAME_KEY);
+    if (savedRep) {
+      repNameInput.value = savedRep;
+    }
+
+    repNameInput.addEventListener("change", () => {
+      localStorage.setItem(REP_NAME_KEY, repNameInput.value.trim());
+    });
+
+    function formatActivityTime(iso) {
+      if (!iso) return "—";
+      try {
+        const d = new Date(iso);
+        return d.toLocaleString(undefined, {
+          month: "short",
+          day: "numeric",
+          hour: "numeric",
+          minute: "2-digit",
+        });
+      } catch {
+        return iso;
+      }
+    }
+
+    function fitPillClass(level) {
+      const l = (level || "").toLowerCase();
+      if (l.includes("high")) return "high";
+      if (l.includes("low")) return "low";
+      return "medium";
+    }
+
+    function fillFormFromRow(row) {
+      document.getElementById("company_name").value = row.company_name || "";
+      document.getElementById("industry").value = row.industry || "";
+      if (row.website !== undefined) {
+        document.getElementById("website").value = row.website || "";
+      }
+      if (row.notes !== undefined) {
+        document.getElementById("notes").value = row.notes || "";
+      }
+      if (row.notes_preview && !row.notes) {
+        document.getElementById("notes").value = row.notes_preview || "";
+      }
+      if (row.rep_name && row.rep_name !== "Anonymous") {
+        repNameInput.value = row.rep_name;
+        localStorage.setItem(REP_NAME_KEY, row.rep_name);
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function renderActivityRows(items, tbody) {
+      tbody.innerHTML = "";
+      items.forEach((row) => {
+        const tr = document.createElement("tr");
+        tr.title = "Click to fill form with this search";
+        tr.innerHTML = `
+          <td>${formatActivityTime(row.created_at)}</td>
+          <td>${row.rep_name || "—"}</td>
+          <td><strong>${row.company_name || "—"}</strong></td>
+          <td>${row.industry || row.industry_label || "—"}</td>
+          <td>${row.entity_type_label || "—"}</td>
+          <td><span class="fit-pill ${fitPillClass(row.fit_level)}">${row.fit_score ?? "—"} ${row.fit_level || ""}</span></td>
+          <td>${row.matched_case_title || "—"}</td>
+        `;
+        tr.addEventListener("click", () => fillFormFromRow(row));
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderMiniTable(items) {
+      if (!items.length) return "<p class='mgmt-group-meta'>No items.</p>";
+      const rows = items
+        .map(
+          (row) => `
+        <tr>
+          <td><strong>${row.company_name}</strong><br><span class="mgmt-group-meta">${row.rep_name} · ${formatActivityTime(row.created_at)}</span></td>
+          <td>${row.industry_label || row.industry || "—"}</td>
+          <td>${row.entity_type_label || "—"}</td>
+          <td><span class="fit-pill ${fitPillClass(row.fit_level)}">${row.fit_score ?? "—"} ${row.fit_level || ""}</span></td>
+          <td>${row.matched_case_title || "—"}</td>
+        </tr>`
+        )
+        .join("");
+      return `<table class="mgmt-mini-table"><tbody>${rows}</tbody></table>`;
+    }
+
+    function renderManagementOverview(data) {
+      const summary = data.summary || {};
+      const stats = document.getElementById("mgmtStats");
+      stats.innerHTML = `
+        <div class="mgmt-stat"><strong>${summary.total_searches || 0}</strong><span>Searches</span></div>
+        <div class="mgmt-stat"><strong>${summary.unique_companies || 0}</strong><span>Companies</span></div>
+        <div class="mgmt-stat"><strong>${summary.unique_reps || 0}</strong><span>Reps</span></div>
+        <div class="mgmt-stat"><strong>${summary.high_fit_count || 0}</strong><span>High fit</span></div>
+        <div class="mgmt-stat"><strong>${(summary.duplicated_companies || []).length}</strong><span>Duplicates</span></div>
+      `;
+
+      const takeaways = document.getElementById("mgmtTakeaways");
+      takeaways.innerHTML = "";
+      (data.manager_takeaways || []).forEach((line) => {
+        const li = document.createElement("li");
+        li.textContent = line;
+        takeaways.appendChild(li);
+      });
+
+      const themes = document.getElementById("mgmtThemes");
+      themes.innerHTML = "";
+      if (!(data.themes || []).length) {
+        themes.innerHTML = '<span class="mgmt-group-meta">Themes appear as more searches are logged.</span>';
+      } else {
+        data.themes.forEach((theme) => {
+          const chip = document.createElement("span");
+          chip.className = "theme-chip";
+          chip.textContent = `${theme.label} (${theme.count})`;
+          chip.title = `Reps: ${(theme.reps || []).join(", ")} · Companies: ${(theme.companies || []).join(", ")}`;
+          themes.appendChild(chip);
+        });
+      }
+
+      const repFocus = document.getElementById("mgmtRepFocus");
+      repFocus.innerHTML = "";
+      (data.rep_focus || []).forEach((line) => {
+        const li = document.createElement("li");
+        li.textContent = line;
+        repFocus.appendChild(li);
+      });
+    }
+
+    function renderManagementSections(data) {
+      const container = document.getElementById("mgmtSections");
+      container.innerHTML = "";
+
+      (data.sections || []).forEach((section) => {
+        const details = document.createElement("details");
+        details.className = "mgmt-section";
+        details.open = section.section_id === "by_rep";
+
+        const summary = document.createElement("summary");
+        summary.textContent = `${section.title} (${(section.groups || []).reduce((n, g) => n + (g.count || 0), 0)} searches)`;
+        details.appendChild(summary);
+
+        const body = document.createElement("div");
+        body.className = "mgmt-section-body";
+        if (section.description) {
+          const desc = document.createElement("p");
+          desc.className = "mgmt-group-meta";
+          desc.textContent = section.description;
+          body.appendChild(desc);
+        }
+
+        (section.groups || []).forEach((group) => {
+          const groupEl = document.createElement("div");
+          groupEl.className = "mgmt-group";
+          const reps = (group.reps || []).join(", ");
+          const companies = (group.companies || []).join(", ");
+          groupEl.innerHTML = `
+            <h4>${group.title || group.key}</h4>
+            <p class="mgmt-group-meta">${group.count} search(es) · Reps: ${reps || "—"}</p>
+            <p class="mgmt-group-meta">${companies || "—"}</p>
+          `;
+          groupEl.insertAdjacentHTML("beforeend", renderMiniTable(group.items || []));
+          body.appendChild(groupEl);
+        });
+
+        if (!(section.groups || []).length) {
+          body.innerHTML += '<p class="mgmt-group-meta">No searches in this category yet.</p>';
+        }
+
+        details.appendChild(body);
+        container.appendChild(details);
+      });
+    }
+
+    async function loadPitchFeedbackSummary() {
+      const list = document.getElementById("mgmtPitchFeedback");
+      if (!list) return;
+      try {
+        const response = await fetch(`${API_BASE}/pitch-feedback?limit=15`);
+        const data = await response.json();
+        const items = data.items || [];
+        list.innerHTML = "";
+        if (!items.length) {
+          list.innerHTML = "<li>No pitch feedback yet.</li>";
+          return;
+        }
+        items.forEach((row) => {
+          const li = document.createElement("li");
+          const imp = row.improvements ? ` — “${row.improvements}”` : "";
+          li.textContent =
+            `${formatActivityTime(row.created_at)} · ${row.rep_name} · ${row.company_name}: ` +
+            `used ${row.used_pitch}, liked ${row.liked_pitch}, effective ${row.was_effective}${imp}`;
+          list.appendChild(li);
+        });
+      } catch (err) {
+        console.error("Failed to load pitch feedback", err);
+      }
+    }
+
+    function resetPitchFeedbackForm() {
+      document.getElementById("pitchFeedbackForm").reset();
+      document.getElementById("pitchFeedbackThanks").classList.add("hidden");
+      document.getElementById("pitchFeedbackBtn").disabled = false;
+    }
+
+    document.getElementById("pitchFeedbackForm").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const btn = document.getElementById("pitchFeedbackBtn");
+      btn.disabled = true;
+
+      const payload = {
+        rep_name: repNameInput.value.trim() || "Anonymous",
+        company_name: lastReport.company_name || document.getElementById("company_name").value.trim(),
+        used_pitch: document.getElementById("fb_used_pitch").value,
+        liked_pitch: document.getElementById("fb_liked_pitch").value,
+        was_effective: document.getElementById("fb_was_effective").value,
+        improvements: document.getElementById("fb_improvements").value.trim(),
+        activity_id: lastReport.activity_id || null,
+      };
+
+      try {
+        const response = await fetch(`${API_BASE}/pitch-feedback`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!response.ok) throw new Error("Feedback submit failed");
+        document.getElementById("pitchFeedbackThanks").classList.remove("hidden");
+        loadPitchFeedbackSummary();
+      } catch (err) {
+        console.error(err);
+        btn.disabled = false;
+        alert("Could not save feedback. Is the backend running?");
+      }
+    });
+
+    async function loadActivityTable() {
+      const rep = activityRepFilter.value;
+      const url = rep
+        ? `${API_BASE}/activity?limit=100&rep_name=${encodeURIComponent(rep)}`
+        : `${API_BASE}/activity?limit=100`;
+
+      const response = await fetch(url);
+      const data = await response.json();
+      const items = data.items || [];
+      const reps = data.reps || [];
+
+      const current = activityRepFilter.value;
+      activityRepFilter.innerHTML = '<option value="">Everyone</option>';
+      reps.forEach((name) => {
+        const opt = document.createElement("option");
+        opt.value = name;
+        opt.textContent = name;
+        activityRepFilter.appendChild(opt);
+      });
+      activityRepFilter.value = current;
+
+      renderActivityRows(items, document.getElementById("activityTableBody"));
+      return items;
+    }
+
+    async function loadManagementView() {
+      const empty = document.getElementById("activityEmpty");
+      try {
+        const [mgmtRes, tableItems] = await Promise.all([
+          fetch(`${API_BASE}/activity/management`),
+          loadActivityTable(),
+        ]);
+        const data = await mgmtRes.json();
+
+        if (!tableItems.length && !(data.summary || {}).total_searches) {
+          empty.classList.remove("hidden");
+          loadPitchFeedbackSummary();
+          return;
+        }
+        empty.classList.add("hidden");
+
+        renderManagementOverview(data);
+        renderManagementSections(data);
+        loadPitchFeedbackSummary();
+      } catch (err) {
+        console.error("Failed to load management view", err);
+        empty.classList.remove("hidden");
+      }
+    }
+
+    function setMgmtTab(tab) {
+      ["Overview", "Sections", "All"].forEach((name) => {
+        const panel = document.getElementById(`mgmtPanel${name}`);
+        const btn = document.getElementById(`mgmtTab${name}`);
+        const active = name === tab;
+        panel.classList.toggle("hidden", !active);
+        btn.classList.toggle("active", active);
+      });
+    }
+
+    document.getElementById("mgmtTabOverview").addEventListener("click", () => setMgmtTab("Overview"));
+    document.getElementById("mgmtTabSections").addEventListener("click", () => setMgmtTab("Sections"));
+    document.getElementById("mgmtTabAll").addEventListener("click", () => setMgmtTab("All"));
+    document.getElementById("refreshActivityBtn").addEventListener("click", loadManagementView);
+    activityRepFilter.addEventListener("change", loadActivityTable);
+    loadManagementView();
+
+    function setStatus(message, type) {
+      if (!message) {
+        statusMessage.classList.add("hidden");
+        statusMessage.textContent = "";
+        statusMessage.classList.remove("error", "loading");
+        return;
+      }
+
+      statusMessage.textContent = message;
+      statusMessage.classList.remove("hidden", "error", "loading");
+      statusMessage.classList.add(type === "error" ? "error" : "loading");
+    }
+
+    document.getElementById("exampleBtn").addEventListener("click", () => {
+      document.getElementById("company_name").value = "Patagonia";
+      document.getElementById("industry").value = "Outdoor apparel";
+      document.getElementById("website").value = "https://www.patagonia.com";
+      document.getElementById("notes").value =
+        "Strong sustainability brand, environmental activism, consumer-facing company, supply chain footprint.";
+    });
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Analyzing...";
+      setStatus(
+        "Researching company (website + Tavily)… then Proposal → Quality Review. This may take 30–45 seconds.",
+        "loading"
+      );
+
+      const repName = repNameInput.value.trim();
+      if (!repName) {
+        setStatus("Enter your name so team activity can log who ran this search.", "error");
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Generate sales intelligence";
+        return;
+      }
+      localStorage.setItem(REP_NAME_KEY, repName);
+
+      const payload = {
+        rep_name: repName,
+        company_name: document.getElementById("company_name").value.trim(),
+        industry: document.getElementById("industry").value.trim(),
+        website: document.getElementById("website").value.trim(),
+        notes: document.getElementById("notes").value.trim(),
+        refresh_research: document.getElementById("refresh_research").checked,
+      };
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.detail || `Backend returned ${response.status}`);
+        }
+
+        showResult(data);
+        setStatus("");
+        loadManagementView();
+        resultCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      } catch (error) {
+        setStatus(
+          "Could not connect to backend. Make sure FastAPI is running on port 8000 (uvicorn main:app --reload --port 8000).",
+          "error"
+        );
+        console.error(error);
+      }
+
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Generate sales intelligence";
+    });
+
+    const SOURCE_BADGE_MAP = [
+      ["entity_preview", "Entity preview"],
+      ["website_jina", "Website (Jina)"],
+      ["website_html", "Website (HTML)"],
+      ["website_js", "Website (JS)"],
+      ["website", "Website"],
+      ["tavily_business", "Tavily (business)"],
+      ["tavily", "Tavily (ESG)"],
+      ["wikipedia", "Wikipedia"],
+      ["sec_edgar", "SEC 10-K"],
+      ["notes", "Notes"],
+      ["minimal", "Minimal input"],
+    ];
+
+    function parseSourceParts(sourceKey) {
+      const labels = [];
+      let remaining = sourceKey || "minimal";
+
+      while (remaining) {
+        let matched = false;
+        for (const [key, label] of SOURCE_BADGE_MAP) {
+          if (remaining === key) {
+            labels.push(label);
+            remaining = "";
+            matched = true;
+            break;
+          }
+          if (remaining.startsWith(key + "_and_")) {
+            labels.push(label);
+            remaining = remaining.slice(key.length + 5);
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          labels.push(remaining.replace(/_/g, " "));
+          break;
+        }
+      }
+      return labels;
+    }
+
+    function renderSourceBadges(sourceKey) {
+      const container = document.getElementById("researchSourceBadges");
+      container.innerHTML = "";
+      parseSourceParts(sourceKey).forEach((label) => {
+        const span = document.createElement("span");
+        span.textContent = label;
+        container.appendChild(span);
+      });
+    }
+
+    function applyFitScoreStyle(score, fitLevel) {
+      const scoreBox = document.getElementById("scoreBox");
+      scoreBox.classList.remove("score-high", "score-medium", "score-low");
+
+      const numericScore = Number(score);
+      if (!Number.isNaN(numericScore)) {
+        if (numericScore >= 75) scoreBox.classList.add("score-high");
+        else if (numericScore >= 45) scoreBox.classList.add("score-medium");
+        else scoreBox.classList.add("score-low");
+      } else if ((fitLevel || "").toLowerCase().includes("high")) {
+        scoreBox.classList.add("score-high");
+      } else if ((fitLevel || "").toLowerCase().includes("medium")) {
+        scoreBox.classList.add("score-medium");
+      } else {
+        scoreBox.classList.add("score-low");
+      }
+    }
+
+    function renderOutreachPitch(text) {
+      const container = document.getElementById("outreachPitch");
+      container.innerHTML = "";
+      const paragraphs = (text || "").split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+      if (!paragraphs.length) {
+        container.textContent = "";
+        return;
+      }
+      paragraphs.forEach((paragraph) => {
+        const p = document.createElement("p");
+        p.textContent = paragraph;
+        container.appendChild(p);
+      });
+    }
+
+    function renderMatchedCaseBadge(data) {
+      const badge = document.getElementById("matchedCaseBadge");
+      if (data.matched_case_title) {
+        badge.textContent = data.matched_case_title;
+        badge.classList.remove("hidden");
+      } else {
+        badge.textContent = "";
+        badge.classList.add("hidden");
+      }
+    }
+
+    function showResult(data) {
+      lastReport = data;
+      resetPitchFeedbackForm();
+      resultCard.classList.remove("hidden");
+
+      const cacheNote = document.getElementById("researchCacheNote");
+      if (data.research_from_cache && data.research_cached_at) {
+        cacheNote.textContent =
+          `Loaded saved research from ${data.research_cached_at} (no re-scrape). ` +
+          `Uncheck "Re-run scraping" to refresh.`;
+      } else if (data.research_cache_key) {
+        cacheNote.textContent =
+          "Fresh research saved for reuse when the same company, industry, website, and notes are submitted again.";
+      } else {
+        cacheNote.textContent = "";
+      }
+
+      const sourceKey = data.research_source || "minimal";
+      renderSourceBadges(sourceKey);
+      document.getElementById("researchPreview").textContent =
+        data.research_preview || "";
+
+      const urls = data.research_urls || [];
+      const sourcesCount = document.getElementById("sourcesCount");
+      sourcesCount.textContent = urls.length
+        ? `Sources (${urls.length})`
+        : "No source URLs returned";
+
+      const researchUrls = document.getElementById("researchUrls");
+      researchUrls.innerHTML = "";
+      urls.forEach((url) => {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = url;
+        li.appendChild(link);
+        researchUrls.appendChild(li);
+      });
+
+      document.getElementById("resultCompany").textContent = data.company_name || "Unknown company";
+      document.getElementById("fitScore").textContent = data.fit_score;
+      document.getElementById("fitLevel").textContent = data.fit_level + " Fit";
+      applyFitScoreStyle(data.fit_score, data.fit_level);
+
+      const fmtPct = (v) => (v === null || v === undefined || v === "" ? "N/A" : `${v}%`);
+      const listingLabels = {
+        public: "Public company (direct FMP data)",
+        private: "Private / no public ticker",
+        unknown: "Listing unknown",
+      };
+      const listing = data.company_listing_type || "unknown";
+      document.getElementById("financialListingType").textContent =
+        `Listing: ${listingLabels[listing] || listing}`;
+
+      if (data.financial_available) {
+        const fitNote = data.financial_fit_level ? ` — ${data.financial_fit_level} financial fit` : "";
+        document.getElementById("financialSummary").textContent =
+          `${data.financial_symbol || ""} — Gross ${fmtPct(data.gross_margin_pct)}, ` +
+          `Operating ${fmtPct(data.operating_margin_pct)}, ROA ${fmtPct(data.roa_pct)}` +
+          (data.financial_source ? ` (via ${data.financial_source})` : "") + fitNote;
+        document.getElementById("financialInterpretation").textContent =
+          data.financial_interpretation || "";
+      } else if (data.public_comp_available) {
+        const fitNote = data.public_comp_fit_level ? ` — ${data.public_comp_fit_level} peer fit` : "";
+        document.getElementById("financialSummary").textContent =
+          `Peer comp: ${data.public_comp_name} (${data.public_comp_symbol}) — ` +
+          `${data.public_comp_industry_label || "sector benchmark"} — ` +
+          `Gross ${fmtPct(data.public_comp_gross_margin_pct)}, ` +
+          `Operating ${fmtPct(data.public_comp_operating_margin_pct)}, ROA ${fmtPct(data.public_comp_roa_pct)}` +
+          fitNote;
+        document.getElementById("financialInterpretation").textContent =
+          (data.public_comp_disclaimer || "") +
+          (data.public_comp_interpretation ? ` ${data.public_comp_interpretation}` : "");
+      } else if (data.public_comp_suggested && data.public_comp_name) {
+        document.getElementById("financialSummary").textContent =
+          `Suggested peer: ${data.public_comp_name} (${data.public_comp_symbol}) — ` +
+          `${data.public_comp_industry_label || "sector benchmark"} (margins not loaded)`;
+        document.getElementById("financialInterpretation").textContent =
+          data.public_comp_disclaimer || data.financial_unavailable_reason || "";
+      } else if (data.financial_api_configured) {
+        document.getElementById("financialSummary").textContent =
+          data.financial_unavailable_reason ||
+          "Financial data unavailable for this company.";
+        document.getElementById("financialInterpretation").textContent =
+          listing === "private"
+            ? "No industry peer comp matched — try a more specific industry (e.g. outdoor apparel, packaging)."
+            : "FMP may be rate-limited (402) — wait and retry. Public tickers: PepsiCo (PEP), Nike (NKE).";
+      } else {
+        document.getElementById("financialSummary").textContent =
+          "No financial API configured — add FMP_API_KEY or ALPHA_VANTAGE_API_KEY to backend/.env";
+        document.getElementById("financialInterpretation").textContent =
+          data.financial_unavailable_reason || "";
+      }
+
+      const entityLabel = data.entity_type_label
+        ? `${data.entity_type_label} (${data.hierarchy_level || "unknown"}) — ${data.entity_confidence || "low"} confidence`
+        : "Not classified";
+      document.getElementById("entityTypeLabel").textContent = entityLabel;
+      const method = data.entity_classification_method || "rules";
+      document.getElementById("entityClassificationMethod").textContent =
+        method === "llm"
+          ? "Classification refined by AI (rules were uncertain)"
+          : "Classification by rules";
+      document.getElementById("entityLlmRationale").textContent =
+        data.entity_llm_rationale || "";
+      document.getElementById("entityPitchFocus").textContent = data.entity_pitch_focus || "";
+      document.getElementById("outreachTarget").textContent = data.outreach_target
+        ? `Outreach target: ${data.outreach_target}`
+        : "";
+
+      const entitySignals = document.getElementById("entitySignals");
+      entitySignals.innerHTML = "";
+      (data.entity_matched_signals || []).forEach((item) => {
+        const span = document.createElement("span");
+        span.textContent = item;
+        entitySignals.appendChild(span);
+      });
+
+      document.getElementById("companySummary").textContent = data.company_summary;
+      document.getElementById("useCase").textContent = data.personalized_use_case;
+      renderOutreachPitch(data.outreach_pitch);
+      renderMatchedCaseBadge(data);
+
+      const keySignals = document.getElementById("keySignals");
+      keySignals.innerHTML = "";
+      (data.key_signals || []).forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        keySignals.appendChild(li);
+      });
+
+      const projectTypes = document.getElementById("projectTypes");
+      projectTypes.innerHTML = "";
+      (data.suggested_project_types || []).forEach((item) => {
+        const span = document.createElement("span");
+        span.textContent = item;
+        projectTypes.appendChild(span);
+      });
+
+      const risks = document.getElementById("risks");
+      risks.innerHTML = "";
+      (data.risks_or_unknowns || []).forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        risks.appendChild(li);
+      });
+
+      const qualityRating = document.getElementById("qualityRating");
+      qualityRating.innerHTML = "";
+      if (data.quality_rating) {
+        const span = document.createElement("span");
+        span.textContent = data.quality_rating;
+        qualityRating.appendChild(span);
+      }
+      document.getElementById("qualityReview").textContent = data.quality_review || "";
+
+      const reviewImprovements = document.getElementById("reviewImprovements");
+      reviewImprovements.innerHTML = "";
+      (data.review_improvements || []).forEach((item) => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        reviewImprovements.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>

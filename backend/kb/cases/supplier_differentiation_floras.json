@@ -1,0 +1,94 @@
+{
+  "case_id": "supplier_differentiation_floras",
+  "title": "B2B supplier differentiation → Floras embed",
+  "archetype": "supplier_side_embed_floras",
+  "maturity_level": "L3",
+  "floras_mechanism": "For B2B suppliers selling into enterprise buyers — packaging, ingredients, contract manufacturing, industrial inputs — Floras embeds a small climate contribution into invoices or product lines. The supplier differentiates versus competitors: enterprise customers receive Floras-linked value tied to purchases, which can support the buyer's Scope 3 narratives. This is a supplier win-account story, not buyer wallet accumulation at the brand level.",
+  "lead_triggers": [
+    "we supply",
+    "our customers include",
+    "packaging solutions",
+    "ingredient supplier",
+    "co-manufacturer",
+    "co-manufacturing",
+    "key account",
+    "oem",
+    "private label partner",
+    "b2b supplier",
+    "enterprise clients",
+    "leading brands",
+    "we serve manufacturers",
+    "contract manufacturing",
+    "industrial supplier"
+  ],
+  "pain_signals": [
+    "supplier competes primarily on price and spec sheets",
+    "enterprise customers demand sustainability proof from vendors",
+    "key account renewals require stronger ESG differentiation",
+    "buyer RFPs include supplier sustainability criteria",
+    "difficulty standing out beyond recycled content or material claims",
+    "sales team needs a concrete climate value prop for enterprise accounts"
+  ],
+  "sectors": [
+    "packaging",
+    "ingredients",
+    "food processing",
+    "contract manufacturing",
+    "industrial supplies",
+    "chemicals",
+    "textiles",
+    "components",
+    "logistics",
+    "agriculture"
+  ],
+  "buyer_personas": [
+    "Sales Director",
+    "Key Account Manager",
+    "Chief Commercial Officer",
+    "Head of Sustainability",
+    "VP Sales",
+    "Business Development Lead"
+  ],
+  "budget_source": "Key account budget; sales enablement budget; sustainability commercial budget; contract margin allocation",
+  "safe_claims": [
+    "Floras can help suppliers differentiate enterprise offerings with transaction-linked climate value",
+    "Enterprise customers can receive Floras tied to qualifying purchases from the supplier",
+    "Supplier-embedded Floras can support buyer Scope 3 engagement without the supplier claiming full emissions reductions",
+    "Certificates and project allocation can support enterprise customer reporting when consistent with research"
+  ],
+  "conditional_claims": [
+    "If the supplier serves CPG or retail brands, Floras can align with those buyers' supplier sustainability programs",
+    "If contract volume is high, Floras embed can scale with transaction activity",
+    "If the supplier already reports sustainability metrics, Floras can complement with transaction-linked funding evidence"
+  ],
+  "avoid_claims": [
+    "The supplier's product becomes carbon-neutral by default",
+    "Floras replaces material reduction, recycled content, or lifecycle assessment",
+    "Every enterprise customer automatically achieves Scope 3 reductions",
+    "Floras is the same as the brand buyer accumulating wallet value at Pepsi scale — this is supplier-side embed"
+  ],
+  "output_templates": {
+    "one_liner": "Help {company_name}'s enterprise customers see climate-linked value on every qualifying purchase.",
+    "short_pitch": "{company_name} competes for enterprise accounts where sustainability is increasingly part of the RFP. Floras lets you embed a small climate contribution into qualifying transactions so your customers receive transaction-linked climate value — not a generic offset story. That gives your sales team a differentiated, enterprise-ready narrative: purchases from {company_name} can connect to verified project allocation and certificates that support customer Scope 3 and supplier engagement reporting."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "Our customers only care about price and lead times.",
+      "response": "Floras targets accounts where sustainability is already in RFPs and renewals. It gives commercial teams a differentiator when spec and price are table stakes — especially for strategic enterprise accounts evaluating supplier ESG performance."
+    },
+    {
+      "objection": "We are not the brand — we cannot speak to their Scope 3 wallet.",
+      "response": "Correct — this case is supplier-side embed. The pitch is how Floras helps your customers receive climate-linked value through your transactions, strengthening your account story without pretending to be the brand's enterprise wallet program."
+    },
+    {
+      "objection": "Sustainability is handled by our customer's sustainability team, not procurement.",
+      "response": "Floras connects to procurement activity — the surface area your sales team already owns. It gives buyers' procurement and sustainability teams a shared transaction-linked mechanism rather than a disconnected annual offset purchase."
+    }
+  ],
+  "suggested_project_types": [
+    "Supplier green upgrades",
+    "Renewable energy",
+    "Regenerative agriculture",
+    "Carbon removal"
+  ]
+}

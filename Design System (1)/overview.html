@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floras Design System · Internal Explainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --color-forest: #3d5e3a;
+  --color-leaf: #4a7c59;
+  --color-olive: #5a6e3a;
+  --color-brand-text: #9c9d65;
+  --color-bg: #f5f5f3;
+  --color-surface: #ffffff;
+  --color-surface-warm: #f9f8f6;
+  --color-surface-sage: #f3f5eb;
+  --color-text: #1a2416;
+  --color-text-muted: #6b7c65;
+  --color-border: #e2e8dd;
+  --color-border-soft: #eceee9;
+  --color-balance-bg: #4e6b38;
+  --color-wallet-start: #9c9d65;
+  --color-wallet-end: #3d5e3a;
+  --color-impact-text: #6b7c65;
+  --color-focus: #2d6a4f;
+  --text-label: 0.72rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-h3: 1.2rem;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.page {
+  width: 210mm;
+  height: auto;
+  background: var(--color-surface);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Shared ── */
+.section { padding: 14px 28px; }
+.section-warm { background: var(--color-bg); flex: 1; }
+.section-surface { background: var(--color-surface); flex: 1; }
+.section-divider {
+  width: 28px;
+  height: 2px;
+  background: var(--color-leaf);
+  margin-bottom: 8px;
+}
+.section-label {
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+/* ── Header ── */
+.header {
+  background: linear-gradient(135deg, var(--color-wallet-start), var(--color-wallet-end));
+  color: #fff;
+  padding: 18px 28px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.header-left .wordmark {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.header-left .tagline {
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-top: 1px;
+}
+.header-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #fff;
+  text-align: right;
+  max-width: 260px;
+}
+
+/* ── Body ── */
+p {
+  font-size: var(--text-body-sm);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+p:last-child { margin-bottom: 0; }
+strong { font-weight: 600; }
+code {
+  font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* ── File tree ── */
+.file-tree {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1px 0;
+  font-size: var(--text-body-sm);
+  line-height: 1.8;
+  margin-top: 2px;
+}
+.file-tree .file {
+  color: var(--color-text);
+  font-weight: 500;
+  white-space: nowrap;
+  padding-right: 8px;
+}
+.file-tree .desc {
+  color: var(--color-text);
+  font-weight: 400;
+}
+.file-tree .dir {
+  grid-column: 1 / -1;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-top: 2px;
+}
+.file-tree .dir:first-child { margin-top: 0; }
+.file-tree .spacer { grid-column: 1 / -1; height: 1px; }
+
+/* ── Steps ── */
+.steps {
+  list-style: none;
+  counter-reset: step;
+  margin-top: 2px;
+}
+.steps li {
+  counter-increment: step;
+  font-size: var(--text-body-sm);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--color-text);
+  padding-left: 26px;
+  position: relative;
+  margin-bottom: 3px;
+}
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  background: var(--color-brand-text);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.steps li strong { color: var(--color-text); font-weight: 600; }
+
+/* ── Marks ── */
+.marks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 2px;
+}
+.mark-card {
+  background: var(--color-surface-warm);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+.mark-card .mark-head {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.mark-card .mark-means {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+.mark-card .mark-do {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+.mark-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 1px 6px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+.mark-tag.input { background: var(--color-surface-warm); color: var(--color-text-muted); border: 1px solid var(--color-border); }
+.mark-tag.proof { background: var(--color-surface-warm); color: var(--color-text-muted); border: 1px solid var(--color-border); }
+.mark-tag.example { background: var(--color-surface-sage); color: var(--color-text-muted); border: 1px solid var(--color-border); }
+
+.mark-input { border-left: 3px solid var(--color-text-muted); }
+.mark-proof { border-left: 3px solid var(--color-text-muted); }
+.mark-example { border-left: 3px solid var(--color-text-muted); }
+
+/* ── Footer ── */
+.footer {
+  background: linear-gradient(135deg, var(--color-wallet-start), var(--color-wallet-end));
+  color: #fff;
+  padding: 10px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .wordmark {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.footer .tagline {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+.footer .draft {
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+}
+
+/* ── Print ── */
+@page { margin: 0; }
+@media print {
+  body { padding: 0; background: #fff; }
+  .page { box-shadow: none; width: 100%; min-height: 100vh; }
+}
+
+@media screen and (max-width: 800px) {
+  body { padding: 10px; align-items: flex-start; }
+  .page { width: 100%; min-height: auto; }
+  .section { padding: 12px 16px; }
+  .header { padding: 14px 16px 12px; flex-direction: column; gap: 4px; }
+  .header-title { text-align: left; max-width: 100%; }
+  .marks { grid-template-columns: 1fr; }
+  .footer { padding: 8px 16px; flex-wrap: wrap; gap: 4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-left">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <img src="light-logo.png" alt="" style="height:20px; display:block;">
+        <span style="font-size:0.95rem; font-weight:300; letter-spacing:0.15em; color:#fff;">FLORAS</span>
+      </div>
+      <div class="tagline" style="margin-top:4px;">Reward The Earth</div>
+    </div>
+    <div class="header-title">Floras Design System<br>Internal Explainer</div>
+  </div>
+
+  <!-- WHAT THIS IS -->
+  <div class="section section-warm" style="flex:0 0 auto;">
+    <div class="section-label">What This System Is</div>
+    <div class="section-divider"></div>
+    <p>This is a <strong>governed content production system</strong> — a set of rules, knowledge files, and skill definitions that lets an AI agent produce consistent, on-brand Floras sales and marketing materials from a short brief. Built so every team member can generate recognisable Floras assets in minutes.</p>
+  </div>
+
+  <!-- FOLDER STRUCTURE -->
+  <div class="section section-surface" style="flex:0 0 auto;">
+    <div class="section-label">Folder Structure</div>
+    <div class="section-divider"></div>
+    <div class="file-tree">
+      <span class="dir">floras-design-system/</span>
+      <span class="file">SKILL.md</span><span class="desc">Master entry point. Read this first, always.</span>
+      <span class="file">style-guide.md</span><span class="desc">Brand source of truth. Colours, typography, tone, currency rules.</span>
+      <span class="dir">skills/</span>
+      <span class="file">├ presentation.md</span><span class="desc">Sales presentation rules — structure, slide design, tone.</span>
+      <span class="file">├ email.md</span><span class="desc">Sales email rules — four types, length constraints, formatting.</span>
+      <span class="file">├ one-pager.md</span><span class="desc">One-pager &amp; proposal rules — A4 layout, section structure.</span>
+      <span class="file">└ social-post.md</span><span class="desc">LinkedIn content rules — five post types, no hype, no emojis.</span>
+    </div>
+  </div>
+
+  <!-- HOW TO USE IT -->
+  <div class="section section-warm" style="flex:0 0 auto;">
+    <div class="section-label">How to Use It</div>
+    <div class="section-divider"></div>
+    <p style="color:var(--color-text-muted);margin-bottom:4px;">Every generation follows this exact order. Never skip or reorder.</p>
+    <ol class="steps">
+      <li><strong>Read SKILL.md</strong> — orient yourself to the system structure and rules.</li>
+      <li><strong>Read style-guide.md</strong> — load the brand source of truth before generating anything.</li>
+      <li><strong>Load the relevant skill file</strong> — match artifact type to its skill file (presentation, email, one-pager, or social).</li>
+      <li><strong>Collect the brief</strong> — confirm minimum required inputs. If missing, mark <code>[NEEDS INPUT]</code> and ask. Never invent.</li>
+      <li><strong>Generate the artifact</strong> — apply all brand rules from the style guide and structural rules from the skill file.</li>
+      <li><strong>Run and display the consistency check</strong> — five questions, and show results visibly.</li>
+    </ol>
+  </div>
+
+  <!-- MARKS -->
+  <div class="section section-surface" style="flex:0 0 auto;">
+    <div class="section-label">Marks to Watch For</div>
+    <div class="section-divider"></div>
+    <p style="color:var(--color-text-muted);margin-bottom:6px;">The system uses three tags in outputs. If any are present before shipping, stop.</p>
+    <div class="marks">
+      <div class="mark-card mark-input">
+        <div class="mark-tag input">[NEEDS INPUT]</div>
+        <div class="mark-head" style="color:var(--color-brand-text);">Missing Information</div>
+        <div class="mark-means">A required input was not in the brief.</div>
+        <div class="mark-do"><strong>Do:</strong> Provide the missing detail.</div>
+      </div>
+      <div class="mark-card mark-proof">
+        <div class="mark-tag proof">[NEEDS PROOF]</div>
+        <div class="mark-head" style="color:var(--color-brand-text);">Unverifiable Claim</div>
+        <div class="mark-means">The system cannot verify a claim or figure.</div>
+        <div class="mark-do"><strong>Do:</strong> Supply a source, rewrite as a mechanism, or remove.</div>
+      </div>
+      <div class="mark-card mark-example" style="grid-column:1/-1;">
+        <div class="mark-tag example">[ILLUSTRATIVE EXAMPLE]</div>
+        <div class="mark-head" style="color:var(--color-brand-text);">Constructed Scenario</div>
+        <div class="mark-means">A plausible example built to demonstrate how Floras works — not a real client story.</div>
+        <div class="mark-do"><strong>Do:</strong> Label clearly. Replace with a real case study if one exists. Keep if accurate and representative.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div style="display:flex; align-items:center; gap:8px;">
+      <img src="light-logo.png" alt="" style="height:16px; display:block;">
+      <span style="font-size:0.8rem; font-weight:300; letter-spacing:0.15em; color:#fff;">FLORAS</span>
+    </div>
+    <span class="tagline">Reward The Earth</span>
+    <span class="draft">Draft — not source of truth</span>
+  </div>
+
+</div>
+
+</body>
+</html>

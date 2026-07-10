@@ -1,0 +1,108 @@
+{
+  "case_id": "corporate_travel_loyalty",
+  "title": "Corporate travel & aviation loyalty → Floras",
+  "archetype": "loyalty_replacement_floras",
+  "maturity_level": "L3",
+  "floras_mechanism": "For companies with significant corporate travel or aviation spend, Floras embeds a small climate contribution into travel-related transactions. Instead of loyalty points or miles that reward individuals, the buyer accumulates Floras in an enterprise wallet tied to business travel activity. Those Floras can be allocated toward verified sustainability projects—especially sustainable aviation fuel (SAF) and aviation-related reduction projects—with certificates documenting impact for ESG and stakeholder reporting.",
+  "lead_triggers": [
+    "corporate travel",
+    "business travel",
+    "business flights",
+    "air travel",
+    "aviation",
+    "airline",
+    "private jet",
+    "private aviation",
+    "business aviation",
+    "air miles",
+    "frequent flyer",
+    "loyalty program",
+    "travel program",
+    "saf",
+    "sustainable aviation fuel",
+    "flight emissions",
+    "scope 3 aviation",
+    "scope 3",
+    "charter flight",
+    "flight department",
+    "jet card",
+    "corporate jet"
+  ],
+  "pain_signals": [
+    "high flight-related Scope 3 emissions",
+    "business travel is a major emissions source",
+    "airline loyalty or miles programs with no climate outcome",
+    "SAF commitments without a transaction-linked funding mechanism",
+    "difficulty connecting travel spend to verified climate projects",
+    "ESG reporting gap on corporate aviation or travel",
+    "stakeholder pressure on aviation emissions"
+  ],
+  "sectors": [
+    "financial services",
+    "banking",
+    "private equity",
+    "asset management",
+    "consulting",
+    "professional services",
+    "legal",
+    "travel",
+    "aviation",
+    "hospitality",
+    "luxury",
+    "logistics",
+    "energy",
+    "technology",
+    "insurance"
+  ],
+  "buyer_personas": [
+    "Head of Sustainability / ESG",
+    "Corporate Travel Manager",
+    "Chief Sustainability Officer",
+    "Procurement / T&E lead",
+    "Aviation or flight operations director"
+  ],
+  "budget_source": "Corporate travel and T&E budget; ESG or net-zero program budget; supplier-embedded climate contributions on travel-related transactions",
+  "safe_claims": [
+    "Floras links climate-designated value to business transactions rather than treating climate funding as a separate, disconnected purchase",
+    "Enterprises collect Floras in a wallet and allocate them toward verified sustainability projects",
+    "Floras can support allocation toward projects including sustainable aviation fuel (SAF) and other accredited reduction projects",
+    "Companies receive certificates documenting supported projects for reporting and stakeholder communication",
+    "The loyalty-points analogy applies to mechanics (rewards on transactions), but Floras value is restricted to verified climate impact"
+  ],
+  "conditional_claims": [
+    "If the company has published SAF or aviation decarbonization targets, Floras can align wallet allocation with those priorities",
+    "If the company runs a corporate travel program or uses private aviation, travel-linked Floras accumulation is especially relevant",
+    "If the company reports Scope 3 emissions, transaction-linked Floras can complement travel-emissions disclosure with funded mitigation evidence"
+  ],
+  "avoid_claims": [
+    "Floras eliminates aviation emissions or makes flights carbon-neutral",
+    "Floras replaces all offset or SAF procurement needs",
+    "Every flight automatically generates a specific CO₂ reduction percentage",
+    "Floras is the same as buying generic carbon credits with no link to travel activity",
+    "Personal airline miles convert directly into Floras without supplier integration"
+  ],
+  "output_templates": {
+    "one_liner": "Turn {company_name}'s corporate travel spend into verified climate action—not personal miles.",
+    "short_pitch": "{company_name} already manages significant corporate travel spend and sustainability expectations. Floras embeds a small climate contribution into qualifying travel-related transactions so value flows into an enterprise wallet instead of personal loyalty rewards. Your team can allocate those Floras toward verified projects—including SAF and aviation-related reduction work—and receive certificates that connect travel activity to funded climate impact for ESG and stakeholder reporting."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "We already buy carbon offsets or SAF certificates separately.",
+      "response": "Floras does not replace thoughtful climate procurement—it connects funding to the travel and procurement activity that drives emissions. The wallet gives visibility into which travel spend generated value, where it was allocated, and what certificates resulted, rather than treating offsets as a disconnected annual purchase."
+    },
+    {
+      "objection": "Our employees expect airline miles and travel perks.",
+      "response": "Floras operates at the enterprise level: climate value accrues to the company wallet for verified project allocation, not personal perks. The pitch is stronger when framed as corporate climate accountability on travel spend, not as a replacement for individual frequent-flyer benefits unless policy is already shifting."
+    },
+    {
+      "objection": "Aviation emissions are hard to reduce—we mostly fly.",
+      "response": "That is exactly why transaction-linked climate value matters for travel-heavy organizations. Floras lets travel spend automatically build a pool of climate-designated value that can be directed toward SAF and other verified projects, with documentation that supports Scope 3 and aviation narratives without claiming flights are emissions-free."
+    }
+  ],
+  "suggested_project_types": [
+    "Sustainable aviation fuel (SAF)",
+    "Aviation-related carbon reduction",
+    "Renewable energy",
+    "Carbon removal"
+  ]
+}

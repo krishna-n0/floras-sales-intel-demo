@@ -1,0 +1,82 @@
+{
+  "case_id": "beauty_refill_reuse_rewards",
+  "title": "Beauty refill and reuse → Floras",
+  "archetype": "consumer_behavior_reward_floras",
+  "maturity_level": "L2",
+  "floras_mechanism": "Beauty and personal care brands issue Floras when customers choose refill, reuse, return packaging, or purchase lower-impact product formats. Floras create a sustainability-linked loyalty layer that rewards behavior the brand already wants to encourage.",
+  "lead_triggers": [
+    "beauty",
+    "cosmetics",
+    "personal care",
+    "refill",
+    "reuse",
+    "packaging return",
+    "sustainable packaging",
+    "customer loyalty",
+    "clean beauty",
+    "low-waste beauty",
+    "skincare",
+    "haircare"
+  ],
+  "pain_signals": [
+    "refill programs need stronger customer adoption",
+    "packaging sustainability claims are common and hard to differentiate",
+    "brand wants loyalty without relying only on discounts",
+    "customer sustainability engagement is shallow",
+    "brand has packaging reduction or reuse targets"
+  ],
+  "sectors": [
+    "beauty",
+    "cosmetics",
+    "personal care",
+    "retail",
+    "consumer goods",
+    "ecommerce"
+  ],
+  "buyer_personas": [
+    "Brand Manager",
+    "Head of Loyalty / CRM",
+    "Chief Marketing Officer",
+    "Head of Sustainability",
+    "Packaging Lead"
+  ],
+  "budget_source": "Loyalty budget; marketing budget; packaging sustainability budget; customer retention budget",
+  "safe_claims": [
+    "Floras can reward customers for refill, reuse, and packaging-return behaviors",
+    "Brands can use Floras to make sustainable packaging programs more engaging",
+    "Floras connects customer loyalty with verified sustainability project allocation"
+  ],
+  "conditional_claims": [
+    "If refill or return behavior is tracked, Floras can be issued based on verified customer actions",
+    "If the brand has packaging reduction goals, Floras can support customer participation in those goals"
+  ],
+  "avoid_claims": [
+    "The product becomes zero-waste by default",
+    "Floras eliminates packaging emissions",
+    "Customers can consume unlimited products sustainably because Floras are attached"
+  ],
+  "output_templates": {
+    "one_liner": "Turn {company_name}'s refill and reuse programs into Floras-powered loyalty.",
+    "short_pitch": "{company_name} can use Floras to reward customers for refill, reuse, and packaging-return actions. Instead of relying only on discounts or generic loyalty points, Floras create a climate-linked reward that connects customer behavior to verified sustainability projects."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "Refill adoption is low despite marketing spend.",
+      "response": "Floras give customers a tangible reward tied specifically to refill and return behaviors, making participation more motivating than generic brand messaging or one-time discounts."
+    },
+    {
+      "objection": "Sustainable packaging is already table stakes in beauty.",
+      "response": "Material claims are crowded; Floras differentiate by linking customer actions to verified project allocation—a loyalty layer competitors cannot replicate with packaging labels alone."
+    },
+    {
+      "objection": "We cannot verify whether customers actually reuse packaging.",
+      "response": "Floras should issue on tracked behaviors—refill purchases, registered returns, in-store take-back—using systems the brand already operates or plans to build."
+    }
+  ],
+  "suggested_project_types": [
+    "Packaging circularity",
+    "Renewable energy",
+    "Reforestation",
+    "Ocean plastic reduction"
+  ]
+}

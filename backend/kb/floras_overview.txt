@@ -1,0 +1,218 @@
+FLORAS COMPANY KNOWLEDGE BASE
+=============================
+
+1. What Floras is, in one sentence
+Floras is a climate-fintech / climate-currency company that tries to turn ordinary business transactions into measurable climate action by embedding a small climate contribution into purchases, then letting companies allocate that value toward verified sustainability projects.
+Their public site frames it as: "Turn every transaction into climate action." Floras says suppliers embed Floras into sales, the buyer collects them in an enterprise wallet, allocates them to verified climate projects, and receives impact certificates showing the CO₂ reduction or sustainability action supported.
+The easiest analogy is:
+Floras is like loyalty points or airline miles, but instead of earning points for personal rewards, companies earn climate-value credits that can only be spent on verified climate impact.
+So instead of "buy from Supplier A and get 5% cashback," it becomes more like:
+"Buy from Supplier A and a small percentage of that transaction becomes Floras, which can be directed toward renewable energy, reforestation, sustainable aviation fuel, supplier upgrades, or other climate projects."
+
+2. The core problem Floras is trying to solve
+The big problem is supply chain emissions, especially Scope 3 emissions.
+For many companies, the majority of their emissions do not come from their own offices or factories. They come from the things they buy, transport, use, resell, finance, or consume across their supply chain. Floras' own site says most supply chains account for over 80% of enterprise greenhouse gas emissions, and their point is that companies often do not directly control those operations.
+That creates a practical issue:
+A company might want to reduce emissions, but the emissions are spread across hundreds or thousands of vendors, products, invoices, logistics providers, commodities, services, and facilities. Even if the company has sustainability goals, it is hard to connect day-to-day purchasing behavior with actual climate funding.
+Traditional sustainability efforts often look like this:
+A company buys goods and services as usual. Separately, its sustainability team calculates emissions. Separately, it buys offsets, carbon credits, SAF certificates, renewable energy credits, or invests in supplier decarbonization. Separately, it produces ESG reports. These steps are disconnected from the transaction itself.
+Floras is trying to collapse those steps into one transaction-linked system.
+
+3. The main idea: climate action embedded into transactions
+Floras' core concept is that every purchase can carry a built-in climate contribution.
+A supplier adds Floras to a product or service. When an enterprise buys from that supplier, the Floras value flows into the buyer's Floras wallet. The enterprise can then direct those Floras toward approved sustainability projects. Finally, the enterprise receives certificates or documentation showing what impact was created.
+The public four-step process is roughly:
+Suppliers integrate Floras — Suppliers add Floras to their products or services. A small percentage of the transaction value funds the climate contribution.
+Floras flow to the buyer's wallet — When the goods or services are purchased, the enterprise receives Floras in its wallet.
+The enterprise chooses a climate strategy — The buyer allocates Floras toward projects such as renewable energy, reforestation, sustainable aviation fuel, or reinvestment into supplier green upgrades.
+The enterprise receives verified impact certificates — The company gets certificates or proof showing what project was supported and how much CO₂ was reduced or mitigated.
+So Floras is not just a donation platform. It is trying to become a transaction layer for supply-chain decarbonization.
+
+4. What "Floras" actually are
+Based on the public descriptions, Floras are a closed-loop reward currency.
+LinkedIn describes Floras as "a reward currency given to customers, clients or supply chain partners to mitigate the CO₂ effect of any product or service purchased." It says Floras can be redeemed against accredited carbon offset and reduction projects.
+F6S describes Floras as a transaction-based sustainability system embedded into B2B payments, where a small predefined percentage of each transaction is allocated to verified sustainability actions. It also compares the structure to airline loyalty programs, except the value can only be sent to verified sustainable projects.
+That "closed-loop" part matters. It means Floras are not meant to be normal money that a company can spend on anything. They are restricted to climate-positive uses. That helps create trust: the buyer, supplier, and outside stakeholders can understand that the value is earmarked for sustainability.
+So the mental model is:
+Dollar transaction → Floras generated → wallet balance → project allocation → verified certificate/report.
+
+5. Why this is fintech, not just climate software
+Floras is climate-related, but the mechanism is financial.
+It is not only saying, "Here is a dashboard to measure emissions." It is saying, "Let's attach climate value directly to payment flows and procurement flows."
+That makes it a climate fintech company.
+The finance layer includes: a reward currency, transaction-based funding, wallet infrastructure, B2B payment or invoice connection, allocation of funds/value to climate projects, certificates and reporting, possibly supplier/customer incentive design.
+In other words, Floras is not just tracking impact after the fact. It is trying to route money toward climate impact at the moment commerce happens.
+This is why the loyalty-points comparison is useful. Loyalty systems changed consumer behavior by attaching rewards to transactions. Floras is trying to apply a similar incentive system to climate action.
+
+6. The supply-chain use case
+The strongest use case is enterprise supply-chain decarbonization.
+Imagine a large company buys from many suppliers: packaging companies, food suppliers, logistics providers, software vendors, facility contractors, commodity providers, manufacturers, and so on. The buyer wants to reduce the carbon impact of its supply chain, but it does not want to manually manage climate projects for every purchase.
+With Floras, suppliers can integrate a climate contribution into the transaction. The buyer accumulates Floras from purchases. Then the buyer can decide where those Floras go.
+For example: A food company buys sugar, peanuts, lemons, packaging, and shipping services. Each supplier includes Floras as part of the purchase. The buyer's wallet shows which suppliers generated Floras and how much climate value was accumulated. The buyer might allocate that value to regenerative agriculture, renewable energy, reforestation, or upgrades for farmers/suppliers. Then the buyer receives documentation showing the impact.
+The key point is that the climate action is not detached from procurement. It is linked to who the company buys from and how much it buys.
+
+7. The wallet use case
+The Floras Wallet seems central to the product.
+Their site describes the wallet as a place where enterprises can track incoming Floras, see which suppliers are contributing, accumulate climate currency in real time, allocate Floras to projects, and keep oversight of certificates.
+The wallet is probably the main interface for the buyer.
+A useful way to think of the wallet: It is a climate treasury account for transaction-generated sustainability value.
+It could show things like: total Floras earned, which suppliers generated them, which transactions created them, available balance, allocated balance, supported projects, estimated CO₂ mitigated, certificate history, reports for internal or external use.
+This is important because enterprises do not just need climate action. They need visibility, auditability, and reporting.
+
+8. The project marketplace use case
+Another major part of Floras is the connection to verified sustainability projects.
+Their public site mentions project categories such as: renewable energy, reforestation, sustainable aviation fuel, supplier green upgrades.
+LinkedIn says Floras are redeemed against hundreds of accredited carbon offset and reduction projects.
+So Floras likely acts as a bridge between companies with climate budgets and projects that need funding.
+This matters because companies often struggle with questions like: Which projects are credible? Which match our industry, geography, emissions profile? Which produce certificates we can use? Which are high impact versus low quality?
+
+9. The reporting and certificate use case
+The certificate/reporting layer is what makes Floras valuable to businesses.
+A company does not only want to contribute money. It wants usable proof.
+The Floras public description says companies receive carbon credit or SAF certificates that detail which projects they supported and how much CO₂ was reduced.
+That means the product has to translate transaction activity into impact documentation.
+A possible flow: A company buys $100,000 of goods from suppliers that use Floras. A percentage becomes Floras. The company allocates those Floras toward a verified renewable energy project. The project issues a certificate showing emissions reduction or sustainability impact. The company can use that in internal dashboards, ESG reporting, supplier engagement, customer-facing sustainability claims, or procurement reviews.
+The value is not only environmental. It is also administrative. Floras reduces the hassle of finding projects, tracking contributions, documenting impact, and connecting the impact back to business activity.
+
+10. Why the "transaction-based" part is powerful
+The unique thing about Floras is not simply "fund climate projects." Many companies do that.
+The unique thing is making climate funding proportional to transactions.
+That means climate action scales with commerce.
+If a company buys more from Floras-integrated suppliers, more Floras are generated. If more suppliers join, more of the supply chain becomes climate-linked. If more buyers demand Floras, suppliers have an incentive to participate.
+This creates a network effect: More suppliers → more Floras generated. More buyers → more reason for suppliers to integrate. More projects → more useful places to allocate Floras. More certificates → more reporting value. More transaction volume → more climate funding.
+That is why Floras is trying to be more like infrastructure than a one-off sustainability service.
+
+11. Who Floras serves
+Floras seems to serve at least four groups.
+Enterprises / corporate buyers — Companies that buy lots of goods or services and want to reduce or mitigate supply-chain emissions. They use the wallet, choose projects, and receive certificates. Benefits: easier supply-chain decarbonization, transparent climate action, supplier-level visibility, reporting and certificates, connecting purchases with impact.
+Suppliers — Suppliers can add Floras to their products or services. Benefits: differentiation from competitors, stronger sustainability positioning, better fit for climate-conscious buyers, potential sales advantage. A supplier could say: "When you buy from us, you receive Floras that support verified climate action."
+Climate projects — Projects receive funding from Floras allocations. Benefits: new channel for corporate climate finance, access to buyers/suppliers who want verified impact, recurring transaction-linked funding.
+End consumers / stakeholders — Even if Floras is mostly B2B, consumers, investors, employees, and regulators could benefit indirectly through more transparent proof of climate action.
+
+12. The supplier incentive model
+A big part of the company's promise is supplier participation.
+Most companies cannot fully control supplier emissions. But they can influence suppliers through procurement.
+Floras gives suppliers a way to participate without necessarily rebuilding their whole operations immediately. They can embed Floras into transactions and help fund mitigation or reduction projects.
+Over time, this could become a procurement advantage.
+For example: Company A is choosing between Supplier X and Supplier Y. Supplier X has no climate mechanism. Supplier Y includes Floras, meaning every purchase contributes to the buyer's climate wallet. If the price and quality are similar, Supplier Y becomes more attractive to a sustainability-conscious enterprise.
+So Floras can function as a sales-enablement tool for suppliers and a procurement-decarbonization tool for buyers.
+
+13. The climate strategy layer
+Another important part is that the buyer does not just receive generic offsets. The buyer can choose a strategy.
+Floras mentions letting companies direct Floras to projects that matter most, including renewable energy, reforestation, SAF, or supplier green upgrades.
+That means a company can align its climate spending with its business identity.
+Examples: An airline or travel company might prioritize SAF certificates. A food company might prioritize regenerative agriculture or supplier upgrades. A consumer brand might prioritize reforestation or renewable energy. A logistics company might prioritize clean fuel, fleet electrification, or carbon removal. A retailer might prioritize projects in the geographies where its supply chain operates.
+This is more strategic than generic offsetting. Floras' value is partly in helping companies choose projects that fit their supply chain, brand, and emissions profile.
+
+14. How Floras differs from normal carbon offsets
+Normal carbon offsetting can feel separate from the actual business transaction.
+A company calculates emissions, then buys credits somewhere else. The purchase and the climate action are not directly connected.
+Floras tries to make the connection more direct: the supplier transaction creates the Floras, the Floras go into the buyer's wallet, the buyer allocates them to projects, the buyer receives proof/certificates.
+So the climate action is more integrated into procurement.
+Another difference is the "reward currency" framing. Floras is not only a carbon credit marketplace. It is a mechanism for generating climate-designated value through commerce.
+That said, Floras still depends heavily on the quality of the projects and certificates behind the system.
+
+15. How Floras differs from ESG reporting software
+Traditional ESG software often focuses on: measuring emissions, collecting supplier data, creating dashboards, preparing reports, meeting disclosure requirements.
+Floras seems more action-oriented.
+It is not just: "Here are your emissions."
+It is more: "Here is a transaction-linked pool of climate value, here are projects you can fund, and here is proof of the resulting impact."
+So Floras sits between: procurement, payments, supplier engagement, climate finance, carbon markets, impact reporting.
+That is why it is a hybrid company: part fintech, part climate-tech, part B2B SaaS, part sustainability marketplace.
+
+16. The strongest real-world use cases
+Use case 1: B2B procurement decarbonization — A company buys from many vendors and wants each purchase to contribute to climate action.
+Use case 2: Supplier differentiation — A supplier wants to stand out by adding Floras to invoices/products.
+Use case 3: ESG and sustainability reporting support — Enterprises need documentation for climate claims.
+Use case 4: Climate project funding — Verified sustainability projects need recurring capital.
+Use case 5: Sustainable aviation fuel certificates — Aviation-related companies, travel buyers, corporate travel programs, and logistics-heavy firms may need SAF.
+Use case 6: Supplier green upgrades — Companies could allocate Floras back into their own supplier ecosystem to help suppliers upgrade energy systems or transition to cleaner processes.
+
+17. Why companies would care
+A company might use Floras because it wants to: reduce supply-chain climate impact, make sustainability easier for procurement teams, show customers and investors measurable action, differentiate its brand, support verified projects without managing everything manually, connect suppliers to climate goals, create a repeatable transaction-based climate finance system, produce certificates and reporting evidence.
+The selling point is convenience plus accountability.
+Floras' pitch is basically: You already spend money through your supply chain. Let's make part of that spending automatically produce climate impact.
+
+18. Why suppliers would care
+Suppliers might care because sustainability can help them win business.
+If a supplier sells to large companies, those companies may increasingly ask about emissions, sustainability, climate impact, and ESG alignment. Floras gives suppliers a simple mechanism to offer something concrete.
+Instead of saying, "We care about sustainability," the supplier can say: "Every purchase from us generates Floras for your climate wallet, which you can allocate to verified projects and certificates."
+
+19. What the product probably includes
+Based on public information and the use case, Floras likely involves: supplier integration system, enterprise wallet, project marketplace or project selection engine, certificate/reporting system, admin/compliance layer, possible AI layer (invoice scanning, footprint estimation, project matching, sales intelligence).
+
+20. What "AI" could mean in Floras' company use case
+Natural AI applications: invoice analysis, supplier classification, project matching, impact estimation, reporting automation, sales intelligence (identify companies likely to adopt Floras), quality review of projects/supplier claims.
+
+21. The broader market Floras fits into
+Floras sits in climate fintech — using financial technology to direct capital toward climate outcomes. Floras' angle is specific: make climate finance happen through transactions. That is a different entry point than companies that only measure emissions or only sell carbon credits.
+
+22. The philosophical idea behind Floras
+The deeper idea is that climate action needs to become part of everyday economic behavior.
+Floras tries to make climate action: automatic, transaction-linked, visible, strategic, verified, repeatable.
+A currency is a coordination mechanism. Floras is trying to create a climate-specific value unit that coordinates buyers, suppliers, and projects.
+In plain terms: Floras wants climate impact to move through business networks the same way rewards points, payment rails, and procurement systems already move through business networks.
+
+23. Example scenario: hotel chain
+Imagine a large hotel chain buys food, cleaning supplies, furniture, linens, transportation, and software from hundreds of vendors.
+Without Floras: manual emissions estimation, consultant costs, separate carbon credits, disconnected reports.
+With Floras: participating suppliers embed Floras into transactions. Every purchase generates Floras. The hotel chain allocates toward regenerative agriculture and renewable energy. It receives certificates showing procurement activity funded verified climate action.
+Story: "Our supply chain purchases directly funded measurable climate projects."
+
+24. Another example: commodity supplier
+A sugar, lemon, or peanut supplier sells to food manufacturers and integrates Floras into sales. When a food brand buys ingredients, the brand receives Floras and can allocate toward regenerative agriculture, reforestation, or farming-related emissions reduction. The supplier becomes more attractive; the buyer gets a stronger sustainability story; the climate project gets funding.
+
+25. The company's potential advantage
+Floras combines: transactions, supplier incentives, climate finance, project allocation, wallet tracking, certificates, reporting — usually separate systems.
+The simple version: Floras turns sustainability from a separate department activity into something embedded in buying and selling.
+
+26. The hard parts Floras has to solve
+Trust, verification, supplier adoption, buyer adoption, accounting clarity, avoiding greenwashing, project quality, data integration (invoices, ERP, procurement systems, supplier databases, reporting tools).
+
+27. What makes Floras different from just "carbon credits"
+A carbon credit usually represents a quantified emissions reduction, avoidance, or removal.
+Floras seems more like a currency or reward mechanism that can be redeemed into climate projects/certificates.
+Floras itself is not necessarily the final climate asset. It is the transaction-generated unit that routes value toward the final climate action.
+System: Transaction → Floras → Allocation → Carbon credit / SAF certificate / sustainability certificate.
+
+28. What makes Floras different from charity
+Floras is not framed as charity. Charity is usually a voluntary donation. Floras is built into commercial transactions and tied to business value. That is a business network, not just donation.
+
+29. What makes Floras different from a loyalty program
+A normal loyalty program rewards the buyer with personal or company benefits. Floras rewards the buyer with climate action — the ability to support verified sustainability projects and receive proof. The loyalty analogy is useful but incomplete.
+
+30. Overall read on Floras
+Floras is trying to build a climate-action transaction layer for B2B commerce.
+Core belief: Businesses already spend huge amounts through supply chains. If a small part of those transactions can be automatically directed toward verified climate projects, climate finance becomes easier, more scalable, and more connected to real economic activity.
+Product combination: climate currency, enterprise wallet, supplier integration, verified project marketplace, certificate/reporting system, supply-chain decarbonization tool, climate fintech infrastructure.
+In simple terms: Floras helps companies turn purchases into climate impact. Suppliers generate Floras through transactions. Buyers collect Floras in a wallet. Buyers allocate them to verified projects. Projects create measurable sustainability outcomes. Companies receive certificates and reporting proof.
+
+IDEAL CUSTOMER PROFILE (for fit scoring)
+=========================================
+HIGH FIT signals:
+- Large B2B buyer with many suppliers / complex supply chain (Scope 3 focus)
+- Active sustainability/ESG commitments, climate goals, or public impact narrative
+- Industries with heavy procurement: food & beverage, retail, hospitality, logistics, aviation/travel, manufacturing, commodities
+- Companies that need certificates/reporting for ESG, customers, or investors
+- Suppliers selling to enterprise buyers who care about sustainability (supplier-side fit)
+- High transaction volume across vendors; disconnected offset/procurement workflows today
+
+MEDIUM FIT signals:
+- Some sustainability interest but limited supply-chain complexity
+- Smaller enterprise buyer or fewer suppliers
+- Climate relevance but unclear procurement leverage
+- Consumer brand with indirect supply-chain story
+
+LOW FIT signals:
+- No meaningful B2B procurement or supplier network
+- No sustainability positioning or pressure
+- Business model unrelated to transactions, supply chains, or climate reporting
+- Would not benefit from wallet, certificates, or supplier-embedded climate value
+
+PROJECT TYPES FLORAS SUPPORTS (suggest from this list when relevant):
+- Renewable energy
+- Reforestation
+- Sustainable aviation fuel (SAF)
+- Supplier green upgrades
+- Regenerative agriculture
+- Carbon removal / accredited offset and reduction projects

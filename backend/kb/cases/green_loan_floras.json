@@ -1,0 +1,81 @@
+{
+  "case_id": "green_loan_floras",
+  "title": "Sustainable loan products with embedded Floras",
+  "archetype": "product_embedded_floras",
+  "maturity_level": "L2",
+  "floras_mechanism": "A lender embeds Floras into selected loan products so that part of the loan economics funds verified sustainability projects. The borrower receives a differentiated financing product, while the lender creates a visible climate-linked feature without needing to redesign the entire lending process.",
+  "lead_triggers": [
+    "green loan",
+    "sustainable finance",
+    "climate finance",
+    "business lending",
+    "consumer lending",
+    "auto loan",
+    "mortgage",
+    "equipment finance",
+    "SME lending",
+    "ESG lending",
+    "impact finance"
+  ],
+  "pain_signals": [
+    "financial products are hard to differentiate",
+    "sustainable finance claims feel abstract",
+    "lender wants ESG-linked customer engagement",
+    "borrowers want visible sustainability benefits",
+    "existing green loan products lack an ongoing impact layer"
+  ],
+  "sectors": [
+    "banking",
+    "lending",
+    "fintech",
+    "asset finance",
+    "mortgage finance",
+    "SME finance"
+  ],
+  "buyer_personas": [
+    "Head of Sustainable Finance",
+    "Loan Product Manager",
+    "Chief Marketing Officer",
+    "Head of ESG",
+    "Innovation Lead"
+  ],
+  "budget_source": "Product margin allocation; ESG product budget; marketing budget; sustainable finance innovation budget",
+  "safe_claims": [
+    "Floras can add a visible sustainability-linked layer to loan products",
+    "Borrowers can see part of the product value directed toward verified projects",
+    "The lender can use Floras to make sustainable finance more tangible"
+  ],
+  "conditional_claims": [
+    "If loan proceeds are already tied to green activities, Floras can complement the product narrative",
+    "If the lender tracks borrower sectors, Floras allocation can be aligned with relevant project types"
+  ],
+  "avoid_claims": [
+    "The loan itself is automatically green",
+    "Floras guarantees borrower emissions reduction",
+    "This replaces formal green loan frameworks or sustainability-linked loan standards"
+  ],
+  "output_templates": {
+    "one_liner": "Make {company_name}'s sustainable loan products more tangible with embedded Floras.",
+    "short_pitch": "{company_name} can use Floras to add a climate-linked value layer to selected loan products. A small portion of the product economics can generate Floras that borrowers allocate toward verified projects, helping the lender differentiate sustainable finance products with visible impact rather than abstract ESG positioning."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "We already have green loan or sustainability-linked loan products.",
+      "response": "Floras complements formal green loan frameworks—it adds an ongoing, visible impact layer borrowers can engage with, rather than replacing certification standards or use-of-proceeds requirements."
+    },
+    {
+      "objection": "Borrowers care about rate and terms, not climate features.",
+      "response": "Floras targets differentiation in sustainable finance segments where borrowers and stakeholders already expect tangible ESG value. It makes the sustainability story concrete without changing core underwriting."
+    },
+    {
+      "objection": "Impact claims on lending products attract scrutiny.",
+      "response": "Position Floras as allocated value toward verified projects with documentation, not as automatic emissions reduction from the loan itself. Stay within safe claims and avoid implying the loan is green by default."
+    }
+  ],
+  "suggested_project_types": [
+    "Renewable energy",
+    "Energy efficiency",
+    "Reforestation",
+    "Community development"
+  ]
+}

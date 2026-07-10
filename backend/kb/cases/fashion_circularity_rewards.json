@@ -1,0 +1,81 @@
+{
+  "case_id": "fashion_circularity_rewards",
+  "title": "Fashion circularity and returns → Floras",
+  "archetype": "consumer_behavior_reward_floras",
+  "maturity_level": "L2",
+  "floras_mechanism": "Fashion brands issue Floras to customers for verified circular behaviors such as returning used garments, choosing repair, buying lower-impact collections, or participating in resale and take-back programs. Floras turn circularity from a passive brand claim into a customer engagement mechanism.",
+  "lead_triggers": [
+    "fashion",
+    "apparel",
+    "resale",
+    "take-back program",
+    "returns",
+    "repair",
+    "circular fashion",
+    "sustainable fashion",
+    "textile waste",
+    "customer loyalty",
+    "ethical fashion"
+  ],
+  "pain_signals": [
+    "brand wants more customer participation in circular programs",
+    "take-back or resale program has low engagement",
+    "sustainability claims are not connected to loyalty",
+    "fashion waste is a reputational issue",
+    "brand needs differentiation beyond discounts"
+  ],
+  "sectors": [
+    "fashion",
+    "apparel",
+    "retail",
+    "ecommerce",
+    "luxury",
+    "consumer goods"
+  ],
+  "buyer_personas": [
+    "Head of Loyalty / CRM",
+    "Chief Marketing Officer",
+    "Head of Sustainability",
+    "Circularity Program Lead",
+    "Ecommerce Director"
+  ],
+  "budget_source": "Loyalty budget; marketing budget; sustainability budget; circularity program budget",
+  "safe_claims": [
+    "Floras can reward verified circular customer behaviors",
+    "Brands can use Floras to connect loyalty with sustainability participation",
+    "Floras can support customer engagement around repair, resale, or take-back programs"
+  ],
+  "conditional_claims": [
+    "If garment returns or repairs are tracked, Floras can be linked to verified customer actions",
+    "If the brand has circularity goals, Floras can support consumer participation in those programs"
+  ],
+  "avoid_claims": [
+    "Buying more fashion becomes sustainable because of Floras",
+    "Floras eliminates textile waste",
+    "Every garment purchase is carbon-neutral"
+  ],
+  "output_templates": {
+    "one_liner": "Reward circular fashion behavior with Floras instead of only discounts.",
+    "short_pitch": "{company_name} can use Floras to reward customers for verified circular behaviors such as take-back, repair, resale, or lower-impact product choices. This turns circularity into an active loyalty experience and helps the brand connect customer engagement with verified sustainability funding."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "Our customers respond to discounts, not sustainability rewards.",
+      "response": "Floras can complement discounting by rewarding the specific circular behaviors the brand already wants—take-back, repair, resale—giving sustainability-conscious customers a reason to participate beyond price."
+    },
+    {
+      "objection": "Circularity programs are hard to track and verify.",
+      "response": "Floras issuance should tie to verified customer actions the brand can track through existing return, repair, or resale systems. Start with high-confidence behaviors before expanding to broader claims."
+    },
+    {
+      "objection": "Rewarding returns could increase operational cost.",
+      "response": "Floras target participation in programs the brand is already investing in. The goal is higher engagement on circular initiatives that reduce waste and support ESG narratives, not unlimited returns without operational design."
+    }
+  ],
+  "suggested_project_types": [
+    "Textile recycling",
+    "Circular fashion",
+    "Renewable energy",
+    "Reforestation"
+  ]
+}

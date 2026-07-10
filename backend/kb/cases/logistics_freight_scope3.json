@@ -1,0 +1,94 @@
+{
+  "case_id": "logistics_freight_scope3",
+  "title": "Logistics & freight → Floras on transport spend",
+  "archetype": "transport_transaction_floras",
+  "maturity_level": "L2",
+  "floras_mechanism": "For logistics providers, carriers, freight forwarders, and shippers with significant transport spend, Floras embeds climate-designated value into qualifying freight or logistics transactions. For 3PLs and carriers (supplier role), Floras differentiates service contracts and links invoices to verified projects. For shippers (buyer role), Floras accumulates in an enterprise wallet from transport procurement — addressing Scope 3 Category 4 (upstream transportation) with transaction-linked funding and certificates.",
+  "lead_triggers": [
+    "freight",
+    "logistics",
+    "3pl",
+    "third party logistics",
+    "shipping",
+    "last mile",
+    "fleet",
+    "carrier",
+    "freight forwarder",
+    "transportation",
+    "scope 3 transportation",
+    "freight emissions",
+    "distribution network",
+    "haulage",
+    "cargo"
+  ],
+  "pain_signals": [
+    "transportation is a major Scope 3 emissions source",
+    "freight spend is disconnected from climate funding",
+    "logistics contracts lack sustainability differentiation",
+    "shipper needs evidence linking transport procurement to mitigation",
+    "carrier or 3PL faces RFP pressure on transport emissions",
+    "difficulty funding verified projects proportional to freight activity"
+  ],
+  "sectors": [
+    "logistics",
+    "transportation",
+    "shipping",
+    "freight",
+    "supply chain",
+    "retail",
+    "manufacturing",
+    "consumer goods",
+    "ecommerce",
+    "automotive"
+  ],
+  "buyer_personas": [
+    "Head of Logistics",
+    "Supply Chain Director",
+    "Procurement Director",
+    "Head of Sustainability / ESG",
+    "Transportation Manager",
+    "Commercial Director (3PL/carrier)"
+  ],
+  "budget_source": "Logistics and freight budget; transport procurement budget; ESG or Scope 3 program budget; carrier sales enablement budget",
+  "safe_claims": [
+    "Floras can link climate-designated value to freight or logistics transactions",
+    "Shippers can connect transport procurement activity to verified project allocation",
+    "Logistics suppliers can differentiate contracts with transaction-linked climate value",
+    "Certificates can support Scope 3 transportation reporting narratives when research supports them"
+  ],
+  "conditional_claims": [
+    "If the lead is a 3PL or carrier, pitch supplier-side embed to win shipper accounts",
+    "If the lead is a shipper with high freight spend, pitch wallet accumulation from transport procurement",
+    "If the company reports Category 4 emissions, Floras can complement disclosure with funded mitigation evidence"
+  ],
+  "avoid_claims": [
+    "Freight or shipping becomes carbon-neutral by default",
+    "Floras eliminates transport emissions",
+    "Every shipment automatically offsets a specific CO₂ percentage",
+    "Floras replaces fleet electrification or mode-shift strategies"
+  ],
+  "output_templates": {
+    "one_liner": "Turn {company_name}'s freight and logistics spend into verified climate action — not generic offsets.",
+    "short_pitch": "{company_name} manages meaningful logistics or freight activity where transportation drives Scope 3 pressure. Floras embeds climate-designated value into qualifying transport transactions — whether you are a shipper building wallet value from freight procurement or a 3PL/carrier differentiating enterprise contracts. Allocated Floras flow to verified projects with certificates that connect transport spend to funded climate impact for reporting and customer narratives."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "We already buy logistics offsets or SAF separately.",
+      "response": "Floras links funding to freight and logistics transactions themselves, giving visibility into which transport spend generated value and what projects were supported — rather than treating transport mitigation as a disconnected annual purchase."
+    },
+    {
+      "objection": "Transport emissions are hard to reduce — we mostly optimize routes.",
+      "response": "Route optimization and mode shift remain primary levers. Floras complements them by building transaction-linked climate value from ongoing freight activity, with documentation that supports Scope 3 transportation narratives."
+    },
+    {
+      "objection": "Are you pitching us as a carrier or as a shipper?",
+      "response": "Entity type determines the angle: shippers accumulate wallet value from transport procurement; carriers and 3PLs embed Floras to differentiate enterprise contracts. The mechanism is the same — transaction-linked value — but the commercial story follows your role in the value chain."
+    }
+  ],
+  "suggested_project_types": [
+    "Sustainable aviation fuel (SAF)",
+    "Renewable energy",
+    "Clean fuel and fleet transition",
+    "Carbon removal"
+  ]
+}

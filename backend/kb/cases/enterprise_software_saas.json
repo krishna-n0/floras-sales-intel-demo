@@ -1,0 +1,85 @@
+{
+  "case_id": "enterprise_software_saas",
+  "title": "Enterprise software & SaaS — limited supplier leverage",
+  "archetype": "limited_supplier_leverage",
+  "maturity_level": "L2",
+  "floras_mechanism": "Software and SaaS companies typically have asset-light operations with fewer physical suppliers and limited high-volume goods procurement—so the core Floras supplier-embedded model is a weaker primary fit. Floras may still apply in secondary contexts: corporate travel (if significant), partner or marketplace ecosystems, customer-facing climate programs, or selective vendor relationships—but the pitch should not assume a CPG-style supplier network.",
+  "lead_triggers": [
+    "software",
+    "saas",
+    "cloud",
+    "subscription",
+    "digital services",
+    "enterprise software",
+    "platform",
+    "technology company",
+    "asset-light",
+    "b2b software",
+    "cloud computing"
+  ],
+  "pain_signals": [
+    "strong ESG narrative but limited physical supply chain",
+    "few goods-based suppliers relative to revenue",
+    "sustainability team wants procurement-linked action but procurement is mostly services",
+    "Scope 3 dominated by cloud, travel, or purchased services—not ingredients or packaging",
+    "difficulty finding transaction-embedded climate use case beyond offsets"
+  ],
+  "sectors": [
+    "software",
+    "saas",
+    "technology",
+    "cloud computing",
+    "enterprise software",
+    "fintech software",
+    "digital services",
+    "information technology"
+  ],
+  "buyer_personas": [
+    "Head of Sustainability / ESG",
+    "Chief Sustainability Officer",
+    "Corporate Travel Manager",
+    "Procurement lead (indirect/services)",
+    "Partnerships or ecosystem lead"
+  ],
+  "budget_source": "ESG program budget; corporate travel budget; partner or customer program budget; selective vendor engagement budget",
+  "safe_claims": [
+    "Floras is strongest where transactions and supplier relationships are high-volume and goods-based",
+    "Software companies may still use Floras in specific contexts such as travel-linked programs or partner ecosystems when research supports it",
+    "Fit should be assessed against actual procurement and transaction patterns, not ESG ambition alone"
+  ],
+  "conditional_claims": [
+    "If the company has significant corporate travel, a travel-linked Floras program may be more relevant than supplier-embedded Floras",
+    "If the company runs a marketplace or partner network with transaction flows, Floras may apply to that ecosystem",
+    "If the company has a customer-facing sustainability program, Floras could support consumer or client engagement—distinct from core B2B procurement embed"
+  ],
+  "avoid_claims": [
+    "Floras automatically fits every technology company's supply chain",
+    "SaaS procurement behaves like CPG supplier networks",
+    "Strong ESG ratings alone justify high Floras fit without procurement leverage",
+    "Floras replaces cloud emissions management or data center decarbonization strategies"
+  ],
+  "output_templates": {
+    "one_liner": "For {company_name}, Floras fit depends on where real transaction volume lives—not ESG ambition alone.",
+    "short_pitch": "{company_name} has sustainability visibility but a lighter physical supply chain than CPG or retail peers. Floras' core strength is transaction-embedded climate value across high-volume procurement—so the primary fit is medium unless research shows strong travel spend, partner ecosystems, or specific vendor programs. Any outreach should target concrete transaction paths rather than generic supply-chain decarbonization language."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "We're a leader in sustainability—we should be a great Floras fit.",
+      "response": "ESG leadership matters for engagement, but Floras fit depends on transaction and supplier leverage. For software companies, the honest conversation is which specific spend categories—travel, partners, select vendors—could embed Floras, not whether sustainability goals exist."
+    },
+    {
+      "objection": "Our Scope 3 is mostly cloud and services.",
+      "response": "That profile is common for software firms and typically means lower fit for supplier-embedded Floras at scale. Position secondary use cases only where research supports real transaction attachment."
+    },
+    {
+      "objection": "We want a supply chain story for investors.",
+      "response": "Floras should not be pitched as a blanket supply chain solution without procurement volume. A credible narrative ties to specific programs the company can operationalize, not generic Scope 3 language."
+    }
+  ],
+  "suggested_project_types": [
+    "Renewable energy",
+    "Carbon removal",
+    "Sustainable aviation fuel (SAF)",
+    "Reforestation"
+  ]
+}

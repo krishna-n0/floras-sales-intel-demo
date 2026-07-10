@@ -1,0 +1,101 @@
+{
+  "case_id": "cpg_supplier_procurement",
+  "title": "CPG & retail supplier procurement → Floras",
+  "archetype": "supplier_embedded_floras",
+  "maturity_level": "L3",
+  "floras_mechanism": "For consumer goods, retail, and food & beverage companies with large supplier networks, Floras embeds a small climate contribution into qualifying procurement transactions. Suppliers integrate Floras into invoices or product lines; the buyer accumulates Floras in an enterprise wallet tied to purchasing activity. The buyer allocates those Floras toward verified sustainability projects—with certificates documenting impact for Scope 3, ESG, and supplier engagement reporting.",
+  "lead_triggers": [
+    "consumer goods",
+    "cpg",
+    "fmcg",
+    "retail",
+    "food and beverage",
+    "beverage",
+    "packaging",
+    "ingredients",
+    "co-manufacturing",
+    "supplier network",
+    "procurement spend",
+    "supplier procurement",
+    "supply chain",
+    "scope 3 supply chain",
+    "supplier engagement",
+    "vendor network",
+    "private label",
+    "distribution",
+    "high transaction volume"
+  ],
+  "pain_signals": [
+    "Scope 3 emissions dominate footprint from purchased goods and services",
+    "hundreds or thousands of suppliers with limited sustainability participation",
+    "procurement disconnected from climate funding",
+    "supplier sustainability data is poor or incomplete",
+    "ESG pressure on supply chain decarbonization",
+    "difficulty scaling climate action across procurement volume",
+    "sustainability team lacks leverage over day-to-day purchasing"
+  ],
+  "sectors": [
+    "food and beverage",
+    "consumer goods",
+    "retail",
+    "cpg",
+    "fmcg",
+    "grocery",
+    "supermarket",
+    "beverage",
+    "snacks",
+    "household products",
+    "manufacturing"
+  ],
+  "buyer_personas": [
+    "Chief Procurement Officer",
+    "Head of Sustainability / ESG",
+    "Supply Chain Director",
+    "Supplier Engagement Manager",
+    "Scope 3 Program Lead"
+  ],
+  "budget_source": "Procurement budget; supplier development budget; ESG and Scope 3 program budget; supplier-embedded climate contributions on qualifying transactions",
+  "safe_claims": [
+    "Floras links climate-designated value to procurement transactions rather than treating climate funding as a separate annual purchase",
+    "Enterprises collect Floras in a wallet from supplier-integrated transactions and allocate them toward verified projects",
+    "Floras can support supplier engagement by embedding climate value into the purchasing relationship",
+    "Companies receive certificates documenting supported projects for ESG and stakeholder reporting",
+    "Climate action scales with procurement volume because Floras accumulate from transactions"
+  ],
+  "conditional_claims": [
+    "If the company has published Scope 3 or supplier decarbonization targets, Floras can align wallet allocation with those priorities",
+    "If key suppliers are willing to integrate, Floras can start with a pilot category before broad rollout",
+    "If the company tracks supplier-level sustainability, Floras can complement engagement programs with transaction-linked funding"
+  ],
+  "avoid_claims": [
+    "Floras automatically reduces all Scope 3 emissions",
+    "Every supplier becomes sustainable by integrating Floras",
+    "Floras replaces supplier audits, traceability, or material reduction strategies",
+    "Procurement spend is carbon-neutral once Floras is attached"
+  ],
+  "output_templates": {
+    "one_liner": "Turn {company_name}'s supplier spend into verified climate action at procurement scale.",
+    "short_pitch": "{company_name} manages high-volume procurement across a large supplier base—exactly where Scope 3 pressure concentrates. Floras embeds a small climate contribution into qualifying supplier transactions so value flows into an enterprise wallet instead of sitting outside day-to-day purchasing. Your team can allocate those Floras toward verified projects and receive certificates that connect procurement activity to funded climate impact for ESG and supplier engagement narratives."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "We already run supplier sustainability surveys and annual offset purchases.",
+      "response": "Floras does not replace surveys or thoughtful climate procurement—it connects funding to the transactions that drive Scope 3. The wallet shows which purchasing activity generated value and what projects were supported, rather than treating climate spend as disconnected from procurement."
+    },
+    {
+      "objection": "Our suppliers won't adopt another platform or fee.",
+      "response": "Floras is designed to embed into existing supplier relationships and invoice flows. Pilots can start with willing strategic suppliers or a single category before broader rollout, reducing change-management risk."
+    },
+    {
+      "objection": "Scope 3 is too complex—we mostly use estimates.",
+      "response": "Transaction-linked Floras give procurement a concrete engagement lever while sustainability teams improve data coverage over time. It turns purchasing behavior into measurable climate funding without claiming full Scope 3 accuracy on day one."
+    }
+  ],
+  "suggested_project_types": [
+    "Regenerative agriculture",
+    "Renewable energy",
+    "Reforestation",
+    "Supplier green upgrades",
+    "Carbon removal"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "case_id": "regulated_disclosure_csrd",
+  "title": "CSRD & climate disclosure → procurement-linked evidence",
+  "archetype": "compliance_triggered_floras",
+  "maturity_level": "L2",
+  "floras_mechanism": "For companies facing mandatory or investor-driven climate disclosure (CSRD, SEC climate rules, CDP, assurance expectations), Floras provides transaction-linked evidence: procurement and supplier activity that generates Floras, wallet allocation to verified projects, and certificates documenting impact. This supports auditable, activity-backed sustainability narratives — not generic marketing claims disconnected from business operations.",
+  "lead_triggers": [
+    "csrd",
+    "sec climate disclosure",
+    "cdp",
+    "double materiality",
+    "assurance",
+    "audited esg",
+    "regulatory reporting",
+    "eu sustainability reporting",
+    "esrs",
+    "climate disclosure",
+    "sec climate rule",
+    "sustainability reporting regulation",
+    "assured sustainability",
+    "investor disclosure"
+  ],
+  "pain_signals": [
+    "disclosure requirements demand auditable activity-backed evidence",
+    "sustainability claims feel disconnected from business operations",
+    "assurance or audit scrutiny on ESG narratives",
+    "procurement and Scope 3 data gaps weaken disclosure quality",
+    "investor pressure for measurable, traceable climate action",
+    "annual offset purchases lack link to operational activity"
+  ],
+  "sectors": [
+    "consumer goods",
+    "retail",
+    "manufacturing",
+    "financial services",
+    "energy",
+    "food and beverage",
+    "technology",
+    "pharmaceuticals",
+    "automotive",
+    "industrial"
+  ],
+  "buyer_personas": [
+    "Head of Sustainability / ESG",
+    "Chief Sustainability Officer",
+    "ESG Reporting Lead",
+    "General Counsel / Regulatory Affairs",
+    "Chief Procurement Officer",
+    "Investor Relations (ESG)"
+  ],
+  "budget_source": "ESG reporting and compliance budget; procurement program budget; assurance and disclosure budget",
+  "safe_claims": [
+    "Floras links climate-designated value to business transactions, supporting activity-backed reporting",
+    "Certificates document which projects were supported and can complement disclosure workflows",
+    "Transaction-linked Floras can help connect procurement activity to funded climate impact",
+    "Floras supports evidence for sustainability narratives when aligned with actual purchasing activity"
+  ],
+  "conditional_claims": [
+    "If the company faces CSRD or SEC climate disclosure timelines, Floras can support procurement-linked evidence layers",
+    "If CDP or assurance is mentioned, transaction-linked certificates may strengthen activity-backed claims",
+    "If Scope 3 is a disclosure focus, supplier-embedded Floras can complement data collection narratives"
+  ],
+  "avoid_claims": [
+    "Floras satisfies CSRD, SEC, or CDP requirements by itself",
+    "Floras replaces assurance, audit, or formal disclosure filings",
+    "Certificates automatically guarantee regulatory compliance",
+    "Floras eliminates the need for emissions inventory or supplier data"
+  ],
+  "output_templates": {
+    "one_liner": "Give {company_name} transaction-linked climate evidence for disclosure — not disconnected offset slides.",
+    "short_pitch": "{company_name} faces rising disclosure and assurance expectations where generic sustainability language is no longer enough. Floras ties climate-designated value to qualifying business transactions — especially procurement and supplier activity — then routes that value through a wallet to verified projects with certificates. That gives sustainability and procurement teams activity-backed evidence to support CSRD, CDP, or investor-facing narratives without treating climate funding as a separate, untraceable annual purchase."
+  },
+  "objections_and_responses": [
+    {
+      "objection": "We already have a disclosure platform and carbon accounting tool.",
+      "response": "Floras complements measurement and reporting tools — it adds a transaction-linked funding and certificate layer connected to procurement activity, which accounting platforms typically do not provide on their own."
+    },
+    {
+      "objection": "Assurance providers will not accept this.",
+      "response": "Position Floras as activity-linked evidence and documented project allocation with certificates, not as a substitute for assurance scope. Claims should stay within safe-claim boundaries and match what research supports."
+    },
+    {
+      "objection": "Regulation is a legal/compliance issue, not procurement.",
+      "response": "Disclosure quality increasingly depends on Scope 3 and supplier activity — where procurement lives. Floras gives procurement and sustainability a shared, transaction-linked mechanism that supports the evidence investors and regulators expect behind the narrative."
+    }
+  ],
+  "suggested_project_types": [
+    "Renewable energy",
+    "Reforestation",
+    "Supplier green upgrades",
+    "Carbon removal"
+  ]
+}

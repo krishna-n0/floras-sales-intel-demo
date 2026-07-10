@@ -1,0 +1,307 @@
+{
+  "version": 1,
+  "description": "Classifies where a lead sits in the Floras GTM hierarchy so research and pitching match buyer vs supplier vs financial product issuer roles.",
+  "hierarchy_levels": {
+    "brand_buyer": "Large enterprise that purchases goods/services from many suppliers and accumulates Floras in a wallet.",
+    "supplier": "B2B vendor that sells into enterprise supply chains and can embed Floras to differentiate.",
+    "financial_issuer": "Bank, fintech, or lender that issues cards, loans, or payment products.",
+    "poor_fit": "Entity with weak transaction-embed surface (e.g. pure asset manager, holding company).",
+    "dual_role": "Operates as both a significant buyer and a supplier to other enterprises."
+  },
+  "entity_types": [
+    {
+      "entity_type_id": "enterprise_buyer",
+      "label": "Enterprise buyer",
+      "hierarchy_level": "brand_buyer",
+      "summary": "Accumulates Floras from procurement and supplier-integrated transactions into an enterprise wallet.",
+      "pitch_focus": "Wallet, Scope 3 procurement, supplier engagement, certificates from purchasing activity.",
+      "outreach_target": "Chief Procurement Officer, Head of Sustainability, Supply Chain Director",
+      "industry_signals": [
+        "food and beverage",
+        "consumer goods",
+        "retail",
+        "cpg",
+        "fmcg",
+        "hospitality",
+        "manufacturing",
+        "grocery",
+        "supermarket",
+        "beverage",
+        "logistics",
+        "airline",
+        "hotel"
+      ],
+      "text_signals": [
+        "our suppliers",
+        "supplier network",
+        "procurement",
+        "supply chain",
+        "scope 3",
+        "purchased goods",
+        "vendor",
+        "sourcing",
+        "ingredients",
+        "packaging partners",
+        "private label",
+        "co-manufacturer",
+        "enterprise buyer",
+        "we source from"
+      ],
+      "negative_signals": [
+        "we supply",
+        "our customers include",
+        "b2b solutions for",
+        "ingredient supplier",
+        "packaging solutions for brands",
+        "we serve leading brands"
+      ],
+      "scrape_paths": [
+        "",
+        "/sustainability",
+        "/esg",
+        "/procurement",
+        "/suppliers",
+        "/supply-chain",
+        "/sourcing",
+        "/impact",
+        "/about"
+      ],
+      "tavily_query_focus": "suppliers procurement supply chain scope 3 sustainability program ESG commitments",
+      "preferred_case_ids": [
+        "cpg_supplier_procurement",
+        "corporate_travel_loyalty",
+        "organic_waste_to_value",
+        "fashion_circularity_rewards",
+        "beauty_refill_reuse_rewards",
+        "logistics_freight_scope3",
+        "regulated_disclosure_csrd"
+      ],
+      "discouraged_case_ids": [
+        "green_loan_floras",
+        "credit_card_rewards_floras"
+      ]
+    },
+    {
+      "entity_type_id": "supplier_to_enterprises",
+      "label": "Supplier to enterprises",
+      "hierarchy_level": "supplier",
+      "summary": "Embeds Floras into products or invoices to win and retain enterprise buyers — supplier differentiation, not buyer wallet accumulation.",
+      "pitch_focus": "Win enterprise accounts by embedding Floras; help buyers meet Scope 3 goals through your transactions.",
+      "outreach_target": "Sales Director, Key Account Manager, Head of Sustainability, Commercial leadership",
+      "industry_signals": [
+        "packaging",
+        "ingredients",
+        "logistics",
+        "commodities",
+        "food processing",
+        "contract manufacturing",
+        "industrial supplies",
+        "agriculture",
+        "textiles",
+        "chemicals"
+      ],
+      "text_signals": [
+        "we supply",
+        "our customers",
+        "leading brands",
+        "enterprise clients",
+        "b2b",
+        "ingredient",
+        "packaging solutions",
+        "co-packing",
+        "private label partner",
+        "supplier to",
+        "we serve manufacturers",
+        "key accounts",
+        "oem"
+      ],
+      "negative_signals": [
+        "our supplier network",
+        "we procure from",
+        "global procurement",
+        "thousands of vendors"
+      ],
+      "scrape_paths": [
+        "",
+        "/about",
+        "/solutions",
+        "/products",
+        "/industries",
+        "/customers",
+        "/sustainability",
+        "/b2b",
+        "/company"
+      ],
+      "tavily_query_focus": "B2B customers enterprise clients supplier packaging ingredients manufacturer sustainability",
+      "preferred_case_ids": [
+        "supplier_differentiation_floras",
+        "logistics_freight_scope3"
+      ],
+      "discouraged_case_ids": [
+        "cpg_supplier_procurement",
+        "fashion_circularity_rewards",
+        "beauty_refill_reuse_rewards"
+      ],
+      "pitch_note": "Do NOT pitch enterprise wallet accumulation as if this company is Pepsi. Pitch supplier-side Floras embed to help their enterprise customers."
+    },
+    {
+      "entity_type_id": "financial_product_issuer",
+      "label": "Financial product issuer",
+      "hierarchy_level": "financial_issuer",
+      "summary": "Issues cards, loans, or payment products where Floras can embed as a climate-linked product feature.",
+      "pitch_focus": "Product differentiation on cards, lending, or payments — not supply-chain procurement.",
+      "outreach_target": "Head of Cards, Loan Product Manager, Head of Sustainable Finance, Innovation Lead",
+      "industry_signals": [
+        "banking",
+        "fintech",
+        "payments",
+        "credit card",
+        "lending",
+        "mortgage",
+        "consumer finance",
+        "retail banking"
+      ],
+      "text_signals": [
+        "credit card",
+        "debit card",
+        "card rewards",
+        "lending",
+        "loan product",
+        "mortgage",
+        "green loan",
+        "sustainable finance",
+        "payment",
+        "issuer",
+        "cardholder"
+      ],
+      "negative_signals": [
+        "asset management only",
+        "investment banking advisory",
+        "no consumer products"
+      ],
+      "scrape_paths": [
+        "",
+        "/sustainability",
+        "/esg",
+        "/products",
+        "/cards",
+        "/lending",
+        "/personal",
+        "/business-banking",
+        "/about"
+      ],
+      "tavily_query_focus": "credit card rewards green loan sustainable finance products ESG banking",
+      "preferred_case_ids": [
+        "credit_card_rewards_floras",
+        "green_loan_floras"
+      ],
+      "discouraged_case_ids": [
+        "cpg_supplier_procurement",
+        "fashion_circularity_rewards"
+      ]
+    },
+    {
+      "entity_type_id": "poor_fit_entity",
+      "label": "Poor fit / wrong entity type",
+      "hierarchy_level": "poor_fit",
+      "summary": "Weak Floras transaction-embed surface — e.g. pure asset manager, advisory-only financial firm, or holding company without procurement leverage.",
+      "pitch_focus": "Deprioritize unless a narrow sub-use-case is evidenced (travel, specific product line).",
+      "outreach_target": "Only pursue if research surfaces a specific exception; otherwise deprioritize.",
+      "industry_signals": [
+        "asset management",
+        "investment banking",
+        "private equity",
+        "hedge fund",
+        "wealth management",
+        "capital markets",
+        "holding company"
+      ],
+      "text_signals": [
+        "asset management",
+        "investment management",
+        "portfolio management",
+        "aum",
+        "assets under management",
+        "trading",
+        "securities",
+        "m&a advisory",
+        "advisory services",
+        "fund management",
+        "we manage investments"
+      ],
+      "negative_signals": [
+        "credit card",
+        "retail banking",
+        "consumer lending",
+        "our suppliers",
+        "procurement program"
+      ],
+      "scrape_paths": [
+        "",
+        "/about",
+        "/company",
+        "/investors",
+        "/sustainability"
+      ],
+      "tavily_query_focus": "business model services asset management investment bank AUM sustainability financed emissions",
+      "preferred_case_ids": [
+        "financial_services_low_fit",
+        "enterprise_software_saas"
+      ],
+      "discouraged_case_ids": [
+        "cpg_supplier_procurement"
+      ],
+      "fit_cap_note": "Default fit should be Low unless research shows a clear exception (corporate travel, card products, green lending)."
+    },
+    {
+      "entity_type_id": "dual_buyer_and_supplier",
+      "label": "Dual role: buyer and supplier",
+      "hierarchy_level": "dual_role",
+      "summary": "Both purchases at scale from suppliers AND sells B2B into other enterprises — two valid Floras angles; clarify which side BD is targeting first.",
+      "pitch_focus": "Separate buyer-wallet story from supplier-embed story; BD often targets supplier outreach first.",
+      "outreach_target": "Clarify: supplier commercial team vs procurement/sustainability — suppliers-first GTM may apply.",
+      "industry_signals": [
+        "food processing",
+        "manufacturing",
+        "commodities",
+        "agriculture",
+        "chemicals",
+        "logistics"
+      ],
+      "text_signals": [
+        "we source",
+        "we supply",
+        "our customers and suppliers",
+        "upstream and downstream",
+        "value chain",
+        "ingredients and finished goods"
+      ],
+      "negative_signals": [],
+      "scrape_paths": [
+        "",
+        "/sustainability",
+        "/suppliers",
+        "/procurement",
+        "/solutions",
+        "/products",
+        "/customers",
+        "/about"
+      ],
+      "tavily_query_focus": "suppliers customers procurement B2B supply chain scope 3 sustainability",
+      "preferred_case_ids": [
+        "cpg_supplier_procurement"
+      ],
+      "discouraged_case_ids": [],
+      "pitch_note": "Acknowledge dual role. If BD targets suppliers first, lead with supplier-embed differentiation; note buyer-wallet opportunity separately."
+    }
+  ],
+  "classification_rules": {
+    "min_score": 2,
+    "dual_role_min_buyer_score": 2,
+    "dual_role_min_supplier_score": 2,
+    "llm_refinement_score_margin": 2,
+    "llm_refinement_on_unknown": true,
+    "preview_uses": ["industry_signals", "text_signals from notes and company name only"],
+    "full_uses": ["industry_signals", "text_signals", "negative_signals from research context"]
+  }
+}
