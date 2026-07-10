@@ -8,7 +8,8 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-DATA_DIR = Path(__file__).parent / "data"
+# Local default: backend/data. On Render set FLORAS_DATA_DIR to the persistent disk path.
+DATA_DIR = Path(os.getenv("FLORAS_DATA_DIR", str(Path(__file__).parent / "data")))
 DB_PATH = DATA_DIR / "research_cache.db"
 
 DEFAULT_TTL_HOURS = 168  # 7 days

@@ -5,5 +5,4 @@ openai
 pydantic
 httpx
 beautifulsoup4
-playwright
 tavily-python

@@ -1031,7 +1031,14 @@
   </div>
 
   <script>
-    const API_BASE = "http://127.0.0.1:8000";
+    // Local (frontend on :5173) → talk to backend :8000.
+    // Hosted (same origin as API) → empty base so /analyze-company hits this server.
+    const API_BASE =
+      typeof window.FLORAS_API_BASE === "string"
+        ? window.FLORAS_API_BASE
+        : window.location.port === "5173"
+          ? "http://127.0.0.1:8000"
+          : "";
     const API_URL = `${API_BASE}/analyze-company`;
     const REP_NAME_KEY = "floras_rep_name";
 

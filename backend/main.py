@@ -1,10 +1,13 @@
 import json
 import os
+from pathlib import Path
 from typing import List, Optional
 
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from openai import OpenAI
 from pydantic import BaseModel
 
@@ -42,6 +45,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+FRONTEND_DIR = Path(__file__).resolve().parent.parent / "frontend"
+ASSETS_DIR = FRONTEND_DIR / "assets"
 
 
 class CompanyRequest(BaseModel):
@@ -285,9 +291,22 @@ def _financial_fields(financial_profile: dict) -> dict:
     }
 
 
+@app.get("/health")
+def health():
+    return {"ok": True, "service": "floras-sales-intel"}
+
+
 @app.get("/")
-def root():
-    return {"message": "Floras Sales Intelligence backend is running"}
+def serve_frontend():
+    """Serve the demo UI from the same host as the API (shared deploy URL)."""
+    index = FRONTEND_DIR / "index.html"
+    if index.exists():
+        return FileResponse(index)
+    return {"message": "Floras Sales Intelligence backend is running (frontend not found)"}
+
+
+if ASSETS_DIR.is_dir():
+    app.mount("/assets", StaticFiles(directory=str(ASSETS_DIR)), name="assets")
 
 
 @app.post("/pitch-feedback")

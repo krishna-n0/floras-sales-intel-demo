@@ -111,6 +111,44 @@ Or: `./scripts/start-frontend.sh`
 
 Open **http://127.0.0.1:5173** in your browser.
 
+## Shared hosted demo (Option 1 — one link for the team)
+
+Use this when BD should open **one URL**, share **run history + research cache**, and **not** need API keys on their laptops.
+
+Keys live only in the host’s environment (e.g. Render). Never commit `backend/.env`.
+
+### What you get
+
+- One link: UI + API on the same server  
+- Shared SQLite on a persistent disk → management view / cache / pitch feedback for everyone  
+- You push to GitHub → Render can auto-redeploy  
+
+### Deploy on Render (recommended)
+
+1. Push the latest code to GitHub (including `render.yaml`).
+2. Go to [render.com](https://render.com) → sign up with GitHub.
+3. **New** → **Blueprint** → select `krishna-n0/floras-sales-intel-demo` (or **Web Service** and paste settings from `render.yaml`).
+4. Set secret env vars in the Render dashboard (do not put these in GitHub):
+   - `OPENAI_API_KEY`
+   - `TAVILY_API_KEY`
+   - `FMP_API_KEY` (optional)
+5. Confirm a **Disk** is mounted at `/var/data` (Blueprint sets this; needed so cache/history survive restarts).
+   - Shared history needs a **Starter** (or higher) plan — free web services don’t keep a persistent disk.
+6. Deploy. When live, open your service URL, e.g. `https://floras-sales-intel.onrender.com`.
+7. Send that URL to the team. They enter their name and run companies — everyone sees the same Management view.
+
+### Local vs hosted
+
+| | Local | Hosted |
+|--|-------|--------|
+| Open | http://127.0.0.1:5173 | Your Render URL |
+| Keys | Your `backend/.env` | Render env vars |
+| Cache / history | Only on your Mac | Shared for everyone |
+
+### Free-tier note
+
+Render **free** web services sleep after idle and **don’t keep a persistent disk**, so cache/history can reset. Use **Starter** (~$7/mo) with the Blueprint disk for a real shared demo. First visit after sleep can take ~30–60s on free.
+
 ## Test examples
 
 | Goal | Company | Industry | Notes |

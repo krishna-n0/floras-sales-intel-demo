@@ -1,0 +1,34 @@
+# Render Blueprint — one shared demo URL with persistent SQLite cache/history.
+# Docs: https://render.com/docs/blueprint-spec
+#
+# Persistent disk requires a paid web plan (Starter+). Free tier can run the app
+# but SQLite may reset when the service sleeps/redeploys — upgrade for shared history.
+#
+# Env vars (set in Render dashboard, never commit): OPENAI_API_KEY, TAVILY_API_KEY, FMP_API_KEY
+
+services:
+  - type: web
+    name: floras-sales-intel
+    runtime: python
+    plan: starter
+    rootDir: .
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: FLORAS_DATA_DIR
+        value: /var/data
+      - key: RESEARCH_CACHE_ENABLED
+        value: "true"
+      - key: RESEARCH_CACHE_TTL_HOURS
+        value: "168"
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: TAVILY_API_KEY
+        sync: false
+      - key: FMP_API_KEY
+        sync: false
+    disk:
+      name: floras-data
+      mountPath: /var/data
+      sizeGB: 1
